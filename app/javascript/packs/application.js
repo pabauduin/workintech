@@ -11,8 +11,9 @@ import "bootstrap";
 
 import {} from "../plugins/glasses.js";
 import {} from "../plugins/onboarding_modal.js";
-import {} from "../plugins/updatecss.js";
+
 import {} from "../plugins/button_hover.js";
+import {} from "../plugins/updatecss.js";
 
 // // initMapbox();
 // initAutocomplete();
