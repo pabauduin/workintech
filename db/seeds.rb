@@ -122,7 +122,7 @@ puts 'Create 1 Game'
 dragon_quest = Game.create!(
       name: "Dragon Quest",
       game_type: "Frontend",
-      description: "Le dragon attaque votre village. Approchez vous suffisamment pour le combattre et valide pour le tuer !",
+      description: "Le dragon attaque votre village. Approchez vous suffisamment pour le combattre et le tuer !",
       short_description: "Approchez vous du dragon et tuez le !",
       variable1: "margin",
       background_image: "mountain-game.svg",
@@ -135,8 +135,8 @@ dragon_quest = Game.create!(
 trump = Game.create!(
   name: "Trump",
   game_type: "Frontend",
-  description: "Ce facétieux de Donald a pris la décision de taxer notre emblème nationale ! Moquons-nous gentiment en lui ajoutant un nez de clow. A toi de trouver la bonne couleur, la bonne taille et le bon emplacement ! :)",
-  short_description: "Ajoute un nez de clow à Donald Trump",
+  description: "Ce facétieux de Donald a pris la décision de taxer notre emblème nationale ! Moquons-nous gentiment en lui ajoutant un nez de clown. A toi de trouver la bonne couleur, la bonne taille et le bon emplacement ! :)",
+  short_description: "Ajoute un nez de clown à Donald Trump",
   variable1: "marge",
   variable2: "color",
   variable3: "size",
