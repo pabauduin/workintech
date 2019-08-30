@@ -48,3 +48,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   margin-top: 20px;
 }
 
+#deaddragon {
+      z-index: 1;
+    right: 9%;
+    top: 39%;
+    width: 30%;
+    position: absolute;
+}
+
+#victory {
+  z-index: 5;
+  position: absolute;
+}

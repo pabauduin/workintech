@@ -24,8 +24,8 @@ if (name.innerHTML != " Trump {") {
       else
         {
           hero.style.right = `30%`
-          victory.style.display = "block"
           deaddragon.style.display = "block"
+          setTimeout(function() { victory.style.display = "block";}, 500);
         }
     });
 };
