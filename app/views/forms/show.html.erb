@@ -7,9 +7,9 @@
     <div class="col-12 col-md-6 d-flex justify-content-around">
   <!-- boy, or girl ? -->
   <% if @boy_or_girl[0].points == "-2"  %>
-    <%= image_tag "boy-front", alt: "alttext", class: "character" %>
+    <%= image_tag "boy-front.svg", alt: "alttext", class: "character" %>
   <% elsif @boy_or_girl[0].points == "2" %>
-    <%= image_tag "girl-front", alt: "alttext", class: "character" %>
+    <%= image_tag "girl-front.svg", alt: "alttext", class: "character" %>
    <% end %>
 
     </div>
@@ -26,9 +26,9 @@
     <div class="col-12 col-md-6 d-flex justify-content-around">
      <!-- boy, or girl ? -->
   <% if @boy_or_girl[0].points == "-2"  %>
-    <%= image_tag "boy-back", alt: "alttext", class: "character" %>
+    <%= image_tag "boy-back.svg", alt: "alttext", class: "character" %>
   <% elsif @boy_or_girl[0].points == "2" %>
-    <%= image_tag "girl-back", alt: "alttext", class: "character" %>
+    <%= image_tag "girl-back.svg", alt: "alttext", class: "character" %>
    <% end %>
 
     </div>
