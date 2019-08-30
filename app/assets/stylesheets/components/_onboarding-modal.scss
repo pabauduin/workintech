@@ -1,0 +1,49 @@
+.onboarding-modal {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $white;
+  display: flex;
+  align-items: center;
+  transition-duration: 1s;
+  top:100vh;
+}
+
+.onboarding-modal img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.onboarding-modal p {
+  font-size: 18px;
+}
+
+.onboarding-modal .step {
+  display: flex;
+  align-items: center;
+}
+
+#button-modal {
+  margin-top: 20px;
+}
+
+#button-modal:hover {
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.margin-hide-null {
+  transform: translateY(-100vh);
+  transition-duration: 1s;
+}
+
+.margin-hide {
+  transform: translateY(100vh);
+  transition-duration: 1s;
+}
+

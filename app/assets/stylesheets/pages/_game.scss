@@ -1,0 +1,25 @@
+.game  {
+  position: relative;
+}
+
+.game p {
+  width: 530px;
+}
+
+.play {
+  display:flex;
+  align-items: center;
+}
+
+.game .game-view .mountain img {
+  width:100%;
+}
+
+.mountain {
+  position:relative;
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}

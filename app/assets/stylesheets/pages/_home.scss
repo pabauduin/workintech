@@ -1,1 +1,56 @@
 // Specific CSS for your home-page
+.home-container {
+  height: calc(100vh - 56px);
+  position: relative;
+  display:flex;
+  align-items:center;
+}
+
+.catchphrase {
+  margin: 0 0 300px 5%;
+  width: 600px;
+}
+
+.bridge {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  background-image: asset-url("bridge.svg");
+  height: 596px;
+  width: 992px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+  .bridge {
+    height: 416px;
+    width: 642px;
+    top: 240px;
+  }
+  .home-container {
+  height: 100%;
+  position: relative;
+  display:flex;
+  align-items: flex-start;
+  margin-top:30px;
+}
+.catchphrase {
+  margin: 0;
+}
+}
+
+@media only screen
+    and (device-width : 375px)
+    and (device-height : 812px)
+    and (-webkit-device-pixel-ratio : 3) {
+  .bridge {
+    height: 486px;
+    width: 642px;
+    top: 240px;
+  }
+
+}
+
+.animated {
+  animation-iteration-count: 10;
+}

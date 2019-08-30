@@ -1,0 +1,37 @@
+<div class="fh-100 form-bg">
+<div class="container form-container">
+
+<div class="form-post-h1">
+  <%= image_tag "heart.svg", alt: "alttext" %>
+  <h1>Test de personnalité</h1>
+</div>
+
+<div class="form-post">
+<%= @question.description %>
+
+<%= simple_form_for [@form, @answer] do |f| %>
+<!-- SI LA RÉPONSE INCLUT UNE IMAGE DANS LA DB -->
+<% if @question.answer_1.include?("svg") %>
+  <!-- JE DÉFINIS LES IMAGES -->
+  <% img1 = image_tag "#{@question.answer_1}", alt: "profile" %>
+  <% img2 = image_tag "#{@question.answer_2}", alt: "profile" %>
+  <!-- PUIS JE LES METS EN ANSWER -->
+
+  <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", img1], ["#{@question.value_2}", img2]], label_method: :second, value_method: :first %>
+  <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
+<% else %>
+<div class="container">
+  <div class="select-button">
+    <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", "#{@question.answer_1}"], ["#{@question.value_2}", "#{@question.answer_2}"]], label_method: :second, id: "select-button", value_method: :first%>
+  </div>
+  <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
+</div>
+<% end %>
+
+  <%= f.submit "Valider", class: "button-red"%>
+<% end %>
+
+  </div>
+</div>
+</div>
+</div>

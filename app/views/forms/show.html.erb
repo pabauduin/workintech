@@ -1,0 +1,47 @@
+<div class="fh-100">
+<div class="container">
+  <div class="row align-items-center">
+
+  <!-- condition front -->
+  <% if @total_points < 0 %>
+    <div class="col-12 col-md-6 d-flex justify-content-around">
+  <!-- boy, or girl ? -->
+  <% if @boy_or_girl[0].points == "-2"  %>
+    <%= image_tag "boy-front", alt: "alttext", class: "character" %>
+  <% elsif @boy_or_girl[0].points == "2" %>
+    <%= image_tag "girl-front", alt: "alttext", class: "character" %>
+   <% end %>
+
+    </div>
+    <div class="col-12 col-md-6">
+      <h1>Le métier de Développeur Front-End t'a choisi !</h1>
+      <div class="buttons">
+        <%= link_to "🎮 À toi de jouer !", games_path, class: "button-red" %>
+        <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
+      </div>
+    </div>
+
+  <!-- condition back -->
+  <% else %>
+    <div class="col-12 col-md-6 d-flex justify-content-around">
+     <!-- boy, or girl ? -->
+  <% if @boy_or_girl[0].points == "-2"  %>
+    <%= image_tag "boy-back", alt: "alttext", class: "character" %>
+  <% elsif @boy_or_girl[0].points == "2" %>
+    <%= image_tag "girl-back", alt: "alttext", class: "character" %>
+   <% end %>
+
+    </div>
+    <div class="col-12 col-md-6">
+      <h1>Le métier de Développeur Back-End t'a choisi !</h1>
+      <div class="buttons">
+        <%= link_to "🎮 À toi de jouer !", games_path, class: "button-red" %>
+        <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
+      </div>
+    </div>
+
+  <% end %>
+  </div>
+</div>
+
+</div>

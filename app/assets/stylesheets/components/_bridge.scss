@@ -1,0 +1,61 @@
+@media screen and (max-width: 1400px) {
+  .ellipse {
+    display:none;
+  }
+}
+
+.ellipse {
+  z-index: -3;
+  background-color: $lightblue;
+  mask-image: asset-url("ellipse.svg");
+      height: -webkit-fill-available;
+    width: 100vw;
+    right: 0;
+    -webkit-animation-duration: 23s;
+    animation-duration: 23s;
+    -webkit-animation-name: nightandday;
+    animation-name: nightandday;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-mask-size: auto 100vh;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom right;
+    position: absolute;
+}
+
+.sun {
+  position: absolute;
+  z-index: -2;
+  right: 670px;
+  bottom: 420px;
+  background-image: asset-url("sun.svg");
+  width: 100px;
+  height: 100px;
+  animation-duration: 23s;
+  animation-name: downandup;
+  animation-iteration-count: infinite;
+}
+
+@keyframes downandup {
+  0% {
+      bottom: 420px;
+  }
+  50% {
+    bottom: 200px;
+   }
+  100% {
+    bottom: 420px;
+  }
+}
+
+@keyframes nightandday {
+    0% {
+      background-color: $lightblue;
+    }
+    50% {
+      background-color: $darkblue;
+     }
+    100% {
+      background-color: $lightblue;
+    }
+}

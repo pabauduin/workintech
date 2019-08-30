@@ -1,0 +1,26 @@
+<div class="sublime-grid-container">
+
+<%= form_for("",  method: "get") do |f| %>
+  <div class="sublime-item-1">1</div>
+    <div class="sublime-item-2">Game Name {</div>
+
+  <div class="sublime-item-3">2</div>
+    <div class="sublime-item-4">marge = <%= f.select :variable1, collection: ["10", "30", "60"] %></div>
+
+
+
+  <div class="sublime-item-9">5</div>
+    <div class="sublime-item-10">}</div>
+
+  <div class="sublime-item-11">6</div>
+    <div class="sublime-item-12"></div>
+
+  <div class="sublime-item-13">7</div>
+    <div class="sublime-item-14"></div>
+
+  <div>
+   <%=  f.button :submit, value: "Valider", class: "btn-principal" %>
+  </div>
+
+<% end %>
+</div>

@@ -1,0 +1,11 @@
+.netflix {
+  background-color: $sublime-darkgray;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.netflix img {
+  height: 148px;
+  padding: 3px;
+}

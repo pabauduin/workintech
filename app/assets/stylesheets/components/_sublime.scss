@@ -1,0 +1,93 @@
+.sublime-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 100fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ". ." ". ." ". ." ". ." ". ." ". ." ". .";
+  background-color: $sublime-darkgray;
+  color: white;
+}
+
+.sublime-grid-container form {
+  display:contents;
+}
+
+.sublime-grid-container select {
+  background-color: $yellow;
+  border: 0px;
+}
+
+.sublime-selector {
+
+}
+
+.sublime-item-1 {
+  grid-column: 1; grid-row: 1;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-2 {
+  grid-column: 2; grid-row: 1;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-3 {
+  grid-column: 1; grid-row: 2;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-4 {
+  grid-column: 2; grid-row: 2;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-5 {
+  grid-column: 1; grid-row: 3;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-6 {
+  grid-column: 2; grid-row: 3;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-7 {
+  grid-column: 1; grid-row: 4;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-8 {
+  grid-column: 2; grid-row: 4;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-9 {
+  grid-column: 1; grid-row: 5;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-10 {
+  grid-column: 2; grid-row: 5;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-11 {
+  grid-column: 1; grid-row: 6;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-12 {
+  grid-column: 2; grid-row: 6;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+.sublime-item-13 {
+  grid-column: 1; grid-row: 7;
+  padding: 5px 10px;
+  color: gray;
+}
+.sublime-item-14 {
+  grid-column: 2; grid-row: 7;
+  background-color: $sublime-gray;
+  padding: 5px 10px;
+}
+
