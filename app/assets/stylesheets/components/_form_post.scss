@@ -1,5 +1,5 @@
 .form-post {
-  font-size: 20px;
+  font-size: 24px;
   margin-top: 50px;
   padding: 50px;
   text-align: center;
@@ -8,6 +8,7 @@
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 2px $blue, 5px 5px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
 .form-container {
@@ -51,9 +52,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 input + label:after {
-      content: "";
+    content: "";
     position: absolute;
-    margin-left: 150px;
+    margin-left: 50px;
     border-radius: 50%;
     padding: 5px;
 }
@@ -73,7 +74,7 @@ input:checked + label:after {
     content: "👍";
     position: absolute;
     background: #57afff;
-    margin-left: 150px;
+
     border-radius: 50%;
     padding: 5px;
 }
@@ -88,10 +89,11 @@ label {
   display: inline-flex;
   align-items: center;
   padding: 20px;
-  margin: 0;
+  margin: 16px;
   width:220px;
   border-radius: 35px;
   background-color: rgba(86, 175, 255, 0.3);
+  justify-content: space-around
 }
 
 
@@ -120,4 +122,10 @@ label:hover {
 
 #submit-question {
   display:none;
+}
+
+.form-check img {
+weight: 12px;
+width: 40px;
+
 }

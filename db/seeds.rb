@@ -47,73 +47,73 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Tu es une personne organisée, et le désordre te stress",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  description: "Tu es une personne organisée, et le désordre te stresse :",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
 )
 
 Question.create!(
   description: "Tu as des facilités à rester serein(e) et concentré(e) :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
 )
 
 Question.create!(
   description: "Tu préfères passer du temps sur ton ordinateur, plutôt que de prendre une feuille et dessiner :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
 )
 
 Question.create!(
   description: "Tu préfères planifier tes voyages à l’avance avec tes parents plutôt que partir en mode 'aventure' :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
   )
 
 Question.create!(
   description: "Les problèmes en maths, tu détestes ça :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: -1,
   value_2: 1
 )
 
 Question.create!(
   description: "Tu mets souvent à jour les applications de ton smartphone ?",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: -1,
   value_2: 1
 )
 
 Question.create!(
   description: "La ponctualité, c’est important pour toi :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
 )
 
 Question.create!(
-  description: "Ça t’arrive de lire les modes d’emplois :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  description: "Ça t’arrive de lire les modes d’emploi :",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: 1,
   value_2: -1
 )
 
 Question.create!(
   description: " Être populaire c’est important pour toi (sois honnête) :",
-  answer_1: "D'accord",
-  answer_2: "Pas d'accord",
+  answer_1: "Oui",
+  answer_2: "Non",
   value_1: -1,
   value_2: 1
 )
