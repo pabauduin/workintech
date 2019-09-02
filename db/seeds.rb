@@ -187,3 +187,14 @@ netflix = Game.create!(
 
 puts "Success"
 
+puts "create Netflix Card"
+
+casadepapel = Recommandation.create!(
+  name: "casadepapel",
+  age: "18",
+  genre: "Actuel",
+  origine: "US",
+  image: "casadepapel.jpeg"
+
+
+  )
