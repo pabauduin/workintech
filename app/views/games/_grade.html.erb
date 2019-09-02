@@ -1,0 +1,9 @@
+<% if cookies[:score].to_i <= 1 %>
+  Débutant (<%= cookies[:score] %>pt)
+<% elsif cookies[:score].to_i <= 3 %>
+  Pro (<%= cookies[:score] %>pt)
+<% elsif cookies[:score].to_i <= 5 %>
+  Expert (<%= cookies[:score] %>pt)
+<% else %>
+  Génie (<%= cookies[:score] %>pt)
+<% end %>
