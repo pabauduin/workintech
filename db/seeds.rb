@@ -13,15 +13,15 @@ Job.destroy_all
 
 Job.create!(
   name: "Developpeur Front-End",
-  description: "Lorsque l'on parle de Front-End, il s'agit finalement des éléments du site que l'on voit à l'écran et avec lesquels on peut interagir. Ces éléments sont composés de HTML, CSS et de Javascript contrôlés par le navigateur web de l'utilisateur.
-  Les champs de compétence du Front-End peuvent être séparer en deux : Le design, le développement HTML, CSS, Javascript",
+  description: "Le Développeur Front-End est en charge d’optimiser l’ergonomie et la navigation d’un site web. Contrairement au Développeur Back-End, le Développeur Front-End ne vit pas dans l’ombre. Son travail est visible à l’écran et le rendu est l’élément premier que l’utilisateur verra. Afin de rendre l’interface des utilisateurs agréable, le Développeur Front-End se tient régulièrement informé des évolutions web. Son objectif est de proposer un site internet ergonomique et accessible. Pour cela, une connaissance approfondie des normes du W3C lui est nécessaire.",
   address: "2 avenue des saules"
 )
 
 
 Job.create!(
   name: "Developpeur Back-End",
-  description: "Ainsi, le programmeur back-end se charge de la mise en place, de la configuration, du développement et de la maintenance du serveur, de la base de données et de l’application web en général. Un développeur de l’ombre sans lequel les sites Internet et les applications ne pourraient tout simplement pas fonctionner et exister ! Bien évidemment, ces deux professionnels collaborent étroitement tout au long du projet de développement web.",
+  description: "Le Développeur Back-End est en charge de l’ensemble des fonctionnalités d’un site web. A la différence du Développeur Front-End, le Développeur Back-End ne s’occupe pas de l’aspect ergonomique du site mais de l’aspect technique et fonctionnel. Il travaille dans l’ombre. Il peut concevoir un site web et dans ce cas réaliser lui-même l’architecture technique du site ; ou bien rester sur la plateforme instaurée et adapter des solutions techniques sur celle-ci.
+S’il crée le site, il devra partir de zéro et prendre en considération les inconvénients auxquels il devra faire face.",
   address: "2 avenue des saules"
 
 )
@@ -29,7 +29,7 @@ Job.create!(
 
 Job.create!(
   name: "Product Owner",
-  description: "Le Product Owner est le lien entre le client et l’équipe. C’est donc lui qui, au sein de cette dernière, porte la vision du produit. Il est l’interlocuteur privilégié des utilisateurs. Il devra être très disponible, aussi bien pour les utilisateurs que pour l’équipe. Ses compétences ne se limitent toutefois pas au domaine métier puisqu’il participe activement au sprint et plus particulièrement à la mise en place des tests. Il favorise également la dynamique de l’équipe en lui fournissant une reconnaissance à chaque fin de sprint lors de la présentation du produit au client.",
+  description: "Le Product Owner ou PO est le responsable de la définition et de la conception d’un produit. Expert de la méthodologie agile, il fait le lien entre la partie métier (bonne vision business) et la partie technique du projet. Il doit porter la vision du produit. Il est l’interface entre l’utilisateur, le Scrum Master et les équipes chargées du développement. Ce métier est souvent considéré comme étant un nouveau type de Chef de Projet, la responsabilité principale est de définir un produit qui apportera le maximum de valeur métier aux utilisateurs dans le temps et le budget impartis au projet.",
   address: "2 avenue des saules"
 )
 

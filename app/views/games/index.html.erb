@@ -1,25 +1,30 @@
-<div class="container game-index">
-  <div class="m-h1">
-    <h1>Joue et découvre le code :</h1>
-  </div>
-  <div class="fh">
-    <div class="row">
-      <% @games.each do |game| %>
-        <%= link_to game_path(game) do  %>
-        <div class="col-12 col-md-6 margin-card">
-          <div class="big-card">
-            <div>
-            <div class="game-logo"><%= image_tag game.logo, alt: "logo" %></div>
+<div class="fh-100 form-bg">
+   <div class="container game-index">
+    <div class="m-h1">
+      <h1 class="h1-ig">Joue et découvre le code :</h1>
+    </div>
+    <div class="fh">
+      <div class="row">
+        <% @games.each do |game| %>
+          <%= link_to game_path(game) do  %>
+          <div class="col-12 col-md-6 margin-card">
+            <div class="big-card">
+              <div>
+              <div class="game-logo"><%= image_tag game.logo, alt: "logo" %></div>
+              </div>
+              <div>
+              <h2><%= image_tag game.game_type_image, alt: "game_type", class: "gametype" %><%= game.name %></h2>
+              <div class="content">
+                <%= game.short_description %>
+              </div></div>
             </div>
-            <div>
-            <h2><%= image_tag game.game_type_image, alt: "game_type", class: "gametype" %><%= game.name %></h2>
-            <div class="content">
-              <%= game.short_description %>
-            </div></div>
+          <% end %>
           </div>
-        <% end %>
-        </div>
-    <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+
+
