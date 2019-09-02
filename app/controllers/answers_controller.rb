@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
     @answers = Answer.all
     @boy_or_girl = @answers.select { |answer| answer.points == "2" || answer.points == "-2" }
 
-    if @answers
+    if @answers.count > 0
       @firstname_question = @answers.detect { |a| a.points.count("a-zA-Z").positive? }
       @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
     end
