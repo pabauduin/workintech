@@ -29,19 +29,19 @@
         <% elsif cookies[:boy_or_girl].nil? %>
           <li class="nav-item">
           <div class="avatar-empty" alt="alttext">
-            <div class="desc"><%= cookies[:firstname] %> <%= link_to "Démarrer", forms_path, method: :post %> </a></li>
+            <div class="desc"><%= cookies[:firstname] %> <%= link_to "Démarrer", forms_path, method: :post %> </div></li>
         <% elsif cookies[:firstname].nil? %>
           <li class="nav-item dropdown avatar-name">
           <%= image_tag "boy-back-head.svg", class: "avatar-face dropdown-toggle avatar-right",  alt: "alttext" %>
-          <div class="desc"><%= cookies[:firstname] %> <%= link_to "Continuer le Quizz",  forms_path, method: :post %>: </a></li>
+          <div class="desc"><%= cookies[:firstname] %></div></li>
         <% elsif cookies[:boy_or_girl] == "-2"  %>
           <li class="nav-item dropdown avatar-name">
           <%= image_tag "boy-back-head.svg", class: "avatar-face dropdown-toggle avatar-right",  alt: "alttext" %>
-          <div class="desc"><%= cookies[:firstname] %> <%= link_to "Continuer le Quizz",forms_path, method: :post  %>: </a></li>
+          <div class="desc"><%= cookies[:firstname] %></div></li>
         <% elsif cookies[:boy_or_girl] == "2"  %>
           <li class="nav-item dropdown avatar-name">
           <%= image_tag "girl-back-head.svg", class: "avatar-face dropdown-toggle avatar-right",  alt: "alttext" %>
-          <div class="desc"><%= cookies[:firstname] %> <%= link_to "Continuer le Quizz", forms_path, method: :post %>: </a></li>
+          <div class="desc"><%= cookies[:firstname] %></div></li>
         <% else %>
           <li class="nav-item">
             <div class="avatar-empty" alt="alttext">
