@@ -8,7 +8,11 @@
     </div>
     <h2>Apprends le métier de développeur en t'amusant.</h2>
     <p>Grâce à quelques jeux et un questionnaire de personnalité rapide, découvre les métiers et profils que tes entreprises préférées s'arrachent.</p>
-    <%= link_to "Démarrer", forms_path, method: :post, class: "button-red" %>
+    <% if !cookies[:job].nil? %>
+      <%= link_to "Jouer", games_path, class: "button-red" %>
+    <% else %>
+      <%= link_to "Démarrer", forms_path, method: :post, class: "button-red" %>
+    <% end %>
   </div>
   <div class="bridge"></div>
   <div class="sun"></div>
