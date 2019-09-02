@@ -111,7 +111,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: " Être populaire c’est important pour toi (sois honnête) :",
+  description: "Être populaire c’est important pour toi (sois honnête) :",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: -1,
