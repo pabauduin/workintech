@@ -137,7 +137,8 @@ dragon_quest = Game.create!(
       action_image: "hero.svg",
       solution_variable1: "3",
       logo: "dragon-logo.svg",
-      game_type_image: "bubble-front.svg"
+      game_type_image: "bubble-front.svg",
+      difficulty: 1
       )
 
 trump = Game.create!(
@@ -154,13 +155,14 @@ trump = Game.create!(
   solution_variable2: "red",
   solution_variable3: "10",
   game_type_image: "bubble-front.svg",
-  logo: "trump.svg"
+  logo: "trump.svg",
+  difficulty: 2
 
 )
 
 dragon_revenge = Game.create!(
   name: "Dragon Quest II",
-  game_type: "Frontend",
+  game_type: "Backend",
   description: "Le dragon est de retour, équipez vous et repartez au combat !",
   short_description: "Le retour du dragon.",
   variable1: "marge",
@@ -172,12 +174,13 @@ dragon_revenge = Game.create!(
   solution_variable2: "red",
   solution_variable3: "10",
   game_type_image: "bubble-front.svg",
-  logo: "sword.svg"
+  logo: "sword.svg",
+  difficulty: 3
 
 )
 netflix = Game.create!(
   name: "Netflix",
-  game_type: "back-end",
+  game_type: "Backend",
   description: "Le code de Netflix est tout pété et les recommandations ne sont plus du tout adaptées. Configurer le code pour améliorer les recommandations.",
   short_description: "Améliorer les recommandations de Netflix.",
   variable1: "marge",
@@ -189,7 +192,8 @@ netflix = Game.create!(
   solution_variable2: "red",
   solution_variable3: "10",
   logo: "netflix.svg",
-  game_type_image: "bubble-front.svg"
+  game_type_image: "bubble-front.svg",
+  difficulty: 2
 )
 
 

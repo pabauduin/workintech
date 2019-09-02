@@ -11,6 +11,10 @@
   height: 140px;
 }
 
+.big-card h2 {
+  font-size: 22px !important;
+}
+
 .card-done {
   background-color: rgba(255,255,255,0.6);
   color:$lightblue;
@@ -25,8 +29,19 @@
   height: 140px;
 }
 
-
-
+.card-locked {
+  background-color: rgba(255,255,255,0.6);
+  color:$lightblue;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom:10px;
+  height: 140px;
+}
 
 
 .check {

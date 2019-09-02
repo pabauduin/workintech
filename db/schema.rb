@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2019_08_29_090624) do
     t.string "game_type_image"
     t.string "logo"
     t.string "instructions"
+    t.integer "difficulty"
   end
 
   create_table "jobs", force: :cascade do |t|

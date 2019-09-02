@@ -26,7 +26,7 @@
       <h2>Vous avez réussi l'exercice " <%= @game.name %> " </h2>
       <p>Description du métier de dev front-end lié au padding. Description du métier de dev front-end lié au padding.
       Description du métier de dev front-end lié au padding. Description du métier de dev front-end lié au padding.</p>
-      <% cookies["#{@game.id}"] = @game.name %>
+      <% cookies[:score] = cookies[:score].to_i + @game.difficulty %>
       <div class="buttons">
         <%= link_to "🎮 Nouveau jeu", games_path, class: "button-red" %>
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
