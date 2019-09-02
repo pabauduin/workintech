@@ -1,4 +1,4 @@
-w<div class="game">
+<div class="game">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-12">
@@ -70,8 +70,10 @@ w<div class="game">
     </div>
   </div>
 </div>
-<% if @game.name == "Dragon Quest" %>
+
+<% if @game.name == "Dragon Quest" && cookies[:onboarding].nil? %>
   <%= render "onboarding" %>
+  <% cookies[:onboarding] = "ok" %>
 <% end %>
 
 </div>
