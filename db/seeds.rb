@@ -39,6 +39,14 @@ Answer.destroy_all
 Question.destroy_all
 
 Question.create!(
+  description: "Quel est ton prénom ?",
+  answer_1: "Le prénom",
+  answer_2: "Le prénom",
+  value_1: 0,
+  value_2: 0
+)
+
+Question.create!(
   description: "Choisis ton avatar",
   answer_1: "girl-back-head.svg",
   answer_2: "boy-back-head.svg",

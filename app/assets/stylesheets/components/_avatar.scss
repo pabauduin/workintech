@@ -1,7 +1,14 @@
 .avatar {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
+
+.avatar-face {
+  width: 30px;
+  padding: 3px 3px 3px 8px;
+}
+
 .avatar-large {
   width: 56px;
   border-radius: 50%;
@@ -17,4 +24,35 @@
   border-radius: 0px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
+}
+
+.avatar-empty {
+  background-color: $red;
+  border-radius: 27px;
+  padding: 0 10px;
+  height:40px;
+  color: white;
+}
+
+.avatar-empty p {
+    color: white;
+}
+
+.avatar-name {
+  background-color: #f4b852;
+  border-radius: 27px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+      padding-right: 17px;
+}
+.avatar-name .fas {
+  right: 9px;
+  bottom: 17px;
+  position:absolute;
+}
+.avatar-right {
+  float:right;
+  left: 3px;
+  top: 2px;
 }
