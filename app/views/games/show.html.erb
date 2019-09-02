@@ -1,19 +1,20 @@
-<div class="game">
+w<div class="game">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-12">
-         <div class="logo"><%= image_tag @game.logo %></div>
-        <div class="name-game" style= "text-align: center">
-          <h1> <%= @game.name %> </h1>
-        </div>
-          <h3 style= "padding-bottom: 5%" ><%= @game.description %></h3>
+
+
+          <h1> <span class="logo"> <%= image_tag @game.logo %></span> <%= @game.name %> </h1>
+
       </div>
     </div>
 
 
       <div class="row">
         <div class="col-12 col-md-6">
+           <p><%= @game.description %></p>
           <div id="sublime", class="sublime-grid-container">
+
             <%= form_for("", id: "testform", method: :patch ) do |f| %>
               <div class="sublime-item-1">1</div>
               <div id= "gamename" class="sublime-item-2" > <%= @game.name %> {</div>
@@ -42,7 +43,7 @@
               <div class="sublime-item-13">7</div>
               <div class="sublime-item-14"></div>
 
-          </div> <%= f.submit :Submit,  class: 'button-red mt-3'%>
+          </div> <%= f.submit :Valider,  class: 'button-red mt-3'%>
 
             <% end %>
         </div>
@@ -50,10 +51,10 @@
         <div class="col-12 col-md-6">
           <div class="game-view">
           <div class="mountain">
-            <div id= "victory", style= "position: absolute ; display: none ">
+            <div id= "victory", style= "display: none ">
             <%= image_tag "win.svg"%>
             </div>
-            <div id= "deaddragon", style= "position: absolute ; width: 45%; display: none; ">
+            <div id= "deaddragon", style= "display: none; ">
             <%= image_tag "dragonmort.svg"%>
             </div>
 

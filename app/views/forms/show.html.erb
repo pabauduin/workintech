@@ -20,6 +20,7 @@
         <%= link_to "🎮 À toi de jouer !", games_path, class: "button-red" %>
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
       </div>
+      <% cookies[:job] = "Front-end" %>
     </div>
 
   <!-- condition back -->
@@ -35,12 +36,13 @@
     </div>
     <div class="col-12 col-md-6">
       <h1>Le métier de Développeur Back-End t'a choisi !</h1>
-      <p>Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. </p>
+      <p>Description du métier de Back-end. Description du métier de Back-end. Description du métier de Back-end. Description du métier de Back-end. Description du métier de Back-end. Description du métier de Back-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. Description du métier de Front-end. </p>
       <div class="buttons">
         <%= link_to "🎮 À toi de jouer !", games_path, class: "button-red" %>
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
       </div>
     </div>
+    <% cookies[:job] = "Front-end" %>
 
   <% end %>
   </div>

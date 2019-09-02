@@ -19,16 +19,25 @@
 
   <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", img1], ["#{@question.value_2}", img2]], label_method: :second, value_method: :first %>
   <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
-<% else %>
-<div class="container">
-  <div class="select-button">
-    <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", "#{@question.answer_1}"], ["#{@question.value_2}", "#{@question.answer_2}"]], label_method: :second, id: "select-button", value_method: :first%>
-  </div>
-  <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
-</div>
-<% end %>
+   <%= f.submit "Valider", class: "button-red", id: "submit-question" %>
 
-  <%= f.submit "Valider", class: "button-red", id: "submit-question" %>
+  <% elsif @question.description.include?("prénom") %>
+    <%= f.input :points, label: false %>
+    <%= f.input :question_id, label: false, id: "firstname", input_html: { value:"#{@question.id}", class: "d-none"} %>
+
+    <%= f.submit :submit, class: "button-red", value: "update" %>
+    <% cookies[:firstname] = @firstname %>
+  <% else %>
+  <div class="container">
+    <div class="select-button">
+      <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", "#{@question.answer_1}"], ["#{@question.value_2}", "#{@question.answer_2}"]], label_method: :second, id: "select-button", value_method: :first%>
+    </div>
+    <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
+  </div>
+ <%= f.submit "Valider", class: "button-red", id: "submit-question" %>
+  <% end %>
+
+
 <% end %>
 
   </div>
