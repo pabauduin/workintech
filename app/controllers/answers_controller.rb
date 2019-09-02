@@ -3,11 +3,14 @@ class AnswersController < ApplicationController
     @form     = Form.find(params[:form_id])
     @answer   = Answer.new
     @question_remain = Question.all - @form.questions
+    @firstname_question = Answer.all.detect { |a| a.points.count("a-zA-Z").positive? }
+    @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
+
     if @question_remain.empty?
       redirect_to form_path(params[:form_id])
     else
       # @first_question = @question_remain.select { |question| question.description == "Choisis ton avatar" }
-      @question = @question_remain.sort_by{ |question| -question.answer_1.length }.first
+      @question = @question_remain.sort_by { |question| -question.answer_1.length }.first
     end
   end
 

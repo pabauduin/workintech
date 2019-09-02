@@ -20,6 +20,7 @@
         <%= link_to "🎮 À toi de jouer !", games_path, class: "button-red" %>
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
       </div>
+      <% cookies[:job] = "Front-end" %>
     </div>
 
   <!-- condition back -->
@@ -41,6 +42,7 @@
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
       </div>
     </div>
+    <% cookies[:job] = "Front-end" %>
 
   <% end %>
   </div>
