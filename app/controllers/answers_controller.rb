@@ -8,7 +8,10 @@ class AnswersController < ApplicationController
 
     if @answers.count > 0
       @firstname_question = @answers.detect { |a| a.points.count("a-zA-Z").positive? }
-      @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
+      unless @firstname_question.nil?
+        @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
+
+      end
     end
 
     if @question_remain.empty?
