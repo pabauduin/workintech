@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all
+    @games = Game.all.order(:difficulty)
+    @front_games = Game.where(game_type: "Frontend")
+    @back_games = Game.where(game_type: "Backend")
   end
 
   def result
