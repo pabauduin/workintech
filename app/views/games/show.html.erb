@@ -1,18 +1,25 @@
 <div class="game">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-12">
-
-
+      <div class="col-12 col-md-6">
           <h1> <span class="logo"> <%= image_tag @game.logo %></span> <%= @game.name %> </h1>
+      </div>
 
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+          <% if @game.name.include?("Dragon") %>
+          <div class="card-dragon"><%= @game.description %></div>
+          <% elsif @game.name.include?("Trump") %>
+          <div class="card-trump"><%= @game.description %></div>
+          <% elsif @game.name.include?("Netflix") %>
+          <div class="card-netflix"><%= @game.description %></div>
+          <% end %>
       </div>
     </div>
 
 
       <div class="row">
         <div class="col-12 col-md-6">
-           <p><%= @game.description %></p>
+          <p><%= @game.concept.html_safe %></p>
           <div id="sublime", class="sublime-grid-container">
 
             <%= form_for("", id: "testform", method: :patch ) do |f| %>
@@ -20,21 +27,19 @@
               <div id= "gamename" class="sublime-item-2" > <%= @game.name %> {</div>
               <div class="sublime-item-3">2</div>
               <div class="sublime-item-4">
-                <% if @game.variable3.present? %>
-                  <%= @game.variable3%>= <%= f.select :variable3, collection: ["10", "20", "30"] %>
-                <% end %>
-                </div>
+                <%= @game.variable1 %> = <%= f.select :variable1, collection: ["1", "2", "3"] %>
+              </div>
               <div class="sublime-item-5">3</div>
               <div class="sublime-item-6">
                 <% if @game.variable2.present? %>
                   <%= @game.variable2 %> = <%= f.select :variable2, collection: ["red", "blue", "green" ] %>
-                <% else %>
-                    }
                 <% end %>
               </div>
               <div class="sublime-item-7">4</div>
               <div class="sublime-item-8">
-                <%= @game.variable1 %>= <%= f.select :variable1, collection: ["1", "2", "3"] %>
+                <% if @game.variable3.present? %>
+                  <%= @game.variable3%>= <%= f.select :variable3, collection: ["10", "20", "30"] %>
+                <% end %>
               </div>
               <div class="sublime-item-9">5</div>
               <div class="sublime-item-10"></div>
@@ -55,10 +60,13 @@
             <%= image_tag "win.svg"%>
             </div>
             <div id= "deaddragon", style= "display: none; ">
-            <%= image_tag "dragonmort.svg"%>
+              <%= image_tag "dragonmort.svg"%>
             </div>
-
-            <%= image_tag @game.background_image, alt: "vignette"  %>
+            <% if @game.name.include?("Trump") %>
+              <%= image_tag @game.background_image, alt: "vignette", id: "gameview"  %>
+            <% else %>
+              <%= image_tag @game.background_image, alt: "vignette" %>
+            <% end %>
             <div id="style-variable1" class="hero", style = "position: absolute ; bottom: 23%">
               <%= image_tag @game.action_image, alt: "vignette", style: "width: 80%" %>
             </div>
@@ -75,6 +83,4 @@
   <%= render "onboarding" %>
   <% cookies[:onboarding] = "ok" %>
 <% end %>
-
 </div>
-
