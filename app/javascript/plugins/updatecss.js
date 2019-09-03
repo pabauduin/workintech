@@ -10,6 +10,8 @@ const variable1N = document.getElementById("variable1N")
 const variable2N = document.getElementById("variable2N")
 const variable3N = document.getElementById("variable3N")
 
+if (victory) {
+
 // Auto submit Netflix
 function submit () {
   document.getElementById('netflixForm').submit();
@@ -100,4 +102,7 @@ if (variable3)
         })
     }
 
+
+
+  };
 

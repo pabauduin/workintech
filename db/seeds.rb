@@ -47,6 +47,7 @@ puts 'Destroy all the games'
 Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
+School.destroy_all
 Recommandation.destroy_all
 
 Question.create!(
@@ -211,6 +212,25 @@ dragon_revenge = Game.create!(
   difficulty: 3
 )
 
+puts "Creating Schools"
+
+epita = School.create!(
+  name: "EPITA",
+  latitude: 48.815881,
+  longitude: 2.362871
+)
+
+hetic = School.create!(
+  name: "HETIC",
+  latitude: 48.852190,
+  longitude: 2.420498
+)
+
+epitech = School.create!(
+  name: "EPITECH",
+  latitude: 48.815999,
+  longitude: 2.364218
+)
 
 puts "Success"
 
