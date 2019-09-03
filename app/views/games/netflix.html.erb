@@ -29,7 +29,7 @@
           <% @recommandations.each do |recommandation| %>
           <div class="card" style="width: 15rem;">
           <%= recommandation.name %>
-          <img <%= image_tag recommandation.image %>
+          <%= image_tag recommandation.image %>
           </div>
           <% end %>
         </div>
@@ -39,7 +39,3 @@
 </div>
 
 </div>
-
-<%= console %>
-
-collection: ["10", "20", "60"]
