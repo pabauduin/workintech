@@ -138,22 +138,25 @@ Question.create!(
 
 puts 'Create 1 Game'
 dragon_quest = Game.create!(
-      name: "Dragon Quest",
-      game_type: "Frontend",
-      description: "Le dragon attaque votre village. Approchez vous suffisamment pour le combattre et le tuer !",
-      short_description: "Approchez vous du dragon et tuez le !",
-      variable1: "margin",
-      background_image: "mountain-game.svg",
-      action_image: "hero.svg",
-      solution_variable1: "3",
-      logo: "dragon-logo.svg",
-      game_type_image: "bubble-front.svg"
-      )
+  name: "Dragon Quest",
+  game_type: "Frontend",
+  description: "Le dragon attaque votre village. Approche-toi suffisamment pour le combattre et le tuer !",
+  concept: "Dans ce premier jeu tu devras jouer avec la <span class='concept'>marge</span> qu'il y a entre toi et le dragon. C'est une propriété qu'utilisent souvent les développeurs pour aligner les éléments sur le site.",
+  short_description: "Approchez vous du dragon et tuez le !",
+  variable1: "margin",
+  background_image: "mountain-game.svg",
+  action_image: "hero.svg",
+  solution_variable1: "3",
+  logo: "dragon-logo.svg",
+  game_type_image: "bubble-front.svg",
+  difficulty: 1
+  )
 
 trump = Game.create!(
   name: "Trump",
   game_type: "Frontend",
-  description: "Ce facétieux de Donald a pris la décision de taxer notre emblème nationale ! Moquons-nous gentiment en lui ajoutant un nez de clown. A toi de trouver la bonne couleur, la bonne taille et le bon emplacement ! :)",
+  description: "Ce facétieux de Donald a pris la décision de taxer notre emblème nationale ! Moquons-nous gentiment en lui ajoutant un nez rouge de clown.",
+  concept: "Tu réutiliseras la <span class='concept'>marge</span> dans cet exercice. Mais deux nouveaux concepts du développement front-end font leur apparition : La <span class='concept'>couleur</span> et la <span class='concept'>taille</span> !",
   short_description: "Ajoute un nez de clown à Donald Trump",
   variable1: "marge",
   variable2: "color",
@@ -164,32 +167,17 @@ trump = Game.create!(
   solution_variable2: "red",
   solution_variable3: "10",
   game_type_image: "bubble-front.svg",
-  logo: "trump.svg"
-
+  logo: "trump.svg",
+  difficulty: 2
 )
 
-dragon_revenge = Game.create!(
-  name: "Dragon Quest II",
-  game_type: "Frontend",
-  description: "Le dragon est de retour, équipez vous et repartez au combat !",
-  short_description: "Le retour du dragon.",
-  variable1: "marge",
-  variable2: "color",
-  variable3: "size",
-  background_image: "trump.png",
-  action_image: "red-nose.svg",
-  solution_variable1: "39",
-  solution_variable2: "red",
-  solution_variable3: "10",
-  game_type_image: "bubble-front.svg",
-  logo: "sword.svg"
 
-)
 netflix = Game.create!(
   name: "Netflix",
-  game_type: "back-end",
-  description: "Le code de Netflix est tout pété et les recommandations ne sont plus du tout adaptées. Configurer le code pour améliorer les recommandations.",
+  game_type: "Backend",
+  description: "Le code de Netflix est cassé, et les recommandations ne sont plus du tout adaptées. Améliore le code pour améliorer les recommandations.",
   short_description: "Améliorer les recommandations de Netflix.",
+  concept: "Pour ce premier exercice Back-end, on te demande de changer certaines <span class='concept'>conditions</span> pour modifier l'algorithme. Le travail d'un développeur est de travailler sur ces <span class='concept'>conditions</span> pour personnaliser le site internet.",
   variable1: "marge",
   variable2: "color",
   variable3: "size",
@@ -199,7 +187,27 @@ netflix = Game.create!(
   solution_variable2: "red",
   solution_variable3: "10",
   logo: "netflix.svg",
-  game_type_image: "bubble-front.svg"
+  game_type_image: "bubble-front.svg",
+  difficulty: 2
+)
+
+dragon_revenge = Game.create!(
+  name: "Dragon Quest II",
+  game_type: "Backend",
+  description: "Le dragon est de retour, équipe-toi et reparsa u combat !",
+  short_description: "Le retour du dragon.",
+  concept: "Combine toutes les notions que tu viens d'apprendre pour battre le dragon !",
+  variable1: "marge",
+  variable2: "color",
+  variable3: "size",
+  background_image: "trump.png",
+  action_image: "red-nose.svg",
+  solution_variable1: "39",
+  solution_variable2: "red",
+  solution_variable3: "10",
+  game_type_image: "bubble-front.svg",
+  logo: "sword.svg",
+  difficulty: 3
 )
 
 

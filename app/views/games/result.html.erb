@@ -23,9 +23,9 @@
     <div class="col-12 col-md-6">
 
     <h1>Bravo !</h1>
-      <h2>Vous avez réussi l'exercice " <%= @game.name %> " </h2>
-      <p>Description du métier de dev front-end lié au padding. Description du métier de dev front-end lié au padding.
-      Description du métier de dev front-end lié au padding. Description du métier de dev front-end lié au padding.</p>
+      <h2>Tu as réussi l'exercice " <%= @game.name %> " </h2>
+      <p>Continue à jouer pour en apprendre plus sur le métier de développeur.</p>
+      <% cookies[:score] = cookies[:score].to_i + @game.difficulty %>
       <% cookies["#{@game.id}"] = @game.name %>
       <div class="buttons">
         <%= link_to "🎮 Nouveau jeu", games_path, class: "button-red" %>
@@ -35,7 +35,6 @@
 
   </div>
 </div>
-
 </div>
 
 <%= audio_tag "glasses.mp3", class: "audio-play" %>
