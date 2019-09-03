@@ -242,10 +242,10 @@ murder = Recommandation.create!(
 
 wire = Recommandation.create!(
   name: "The Wire",
-  age: ["60", "20"],
+  age: "60",
   genre: "Police",
   origine: "US",
-  image: "recommandations/thewire"
+  image: "recommandations/thewire.jpeg"
   )
 
 himym = Recommandation.create!(
@@ -322,7 +322,7 @@ marseille = Recommandation.create!(
 
 bureaudeslegendes = Recommandation.create!(
   name: "Bureau des Légendes",
-  age: ["60", "20"],
+  age: "60",
   genre: "Police",
   origine: "UE",
   image: "recommandations/bureaudeslegendes.png"
@@ -330,7 +330,7 @@ bureaudeslegendes = Recommandation.create!(
 
 engrenages = Recommandation.create!(
   name: "Engrenage",
-  age: ["60", "20"],
+  age: "60",
   genre: "Police",
   origine: "UE",
   image: "recommandations/engrenage.jpg"
@@ -659,7 +659,7 @@ dragons = Recommandation.create!(
 tintin = Recommandation.create!(
   name: "Tintin",
   age: "10",
-  genre: "Sci-fi"
+  genre: "Sci-fi",
   origine: "UE",
   image: "recommandations/tintin.jpg"
   )
@@ -742,4 +742,12 @@ superman = Recommandation.create!(
   genre: "Sci-fi",
   origine: "US",
   image: "recommandations/superman.jpg"
+  )
+
+luther = Recommandation.create!(
+  name: "Luther",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/luther.jpg"
   )

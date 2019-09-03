@@ -123,10 +123,12 @@
 .netflixcard {
   display: flex;
   flex-wrap: wrap(4);
+  max-width: 500px;
 }
 
 .netflixcard img {
-  max-width: 100%;
+  max-width: 160%;
+  object-fit: cover;
 }
 
 
