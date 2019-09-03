@@ -6,7 +6,8 @@ const variable3 = document.getElementById("variable3");
 const victory = document.getElementById("victory");
 const deaddragon = document.getElementById("deaddragon");
 const name = document.getElementById("gamename");
-console.log(name.innerHTML);
+
+if (victory) {
 
 // Affectation de valeur par défaut
 if (variable1) {variable1.value = "1"}
@@ -85,3 +86,6 @@ if (variable3)
             {victory.style.display = "block"}
         })
     }
+
+
+  };
