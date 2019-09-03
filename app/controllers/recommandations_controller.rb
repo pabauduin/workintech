@@ -1,6 +1,10 @@
 class RecommandationsController < ApplicationController
-   def new
-    @recommandations = Recommandation.new
+  def index
+    @recommandations = Recommandation.all
+  end
+
+  def new
+    @recommandation = Recommandation.new
   end
 
   def create

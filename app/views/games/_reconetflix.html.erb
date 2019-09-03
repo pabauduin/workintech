@@ -1,5 +1,8 @@
 <div class="card" style="width: 12rem;">
-  <%= image_tag @recommandation.image %>
+  <p>test</p>
+  <p> <% @recommandations.each do |recommandation| %> </p>
+  <%= image_tag recommandation.name %>
+  <% end %>
   <img <%=image_tag("casadepapel.jpe")%> >
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
