@@ -8,6 +8,8 @@
   margin: 10px 20px 0 0;
 }
 
+
+
 .button-red {
   background-color: $red;
   padding: 15px 50px;
@@ -18,11 +20,21 @@
   max-width: 400px;
   border:0px;
 }
+.button-nav {
+  height:30px !important;
+  padding:10px 30px;
+  border-radius:5px;
+}
 
 .button-red:hover {
   color:white;
   text-decoration: none;
   background-color: $lightred;
+}
+
+.button-red a{
+  background-color: $white;
+
 }
 
 .button-red-2 {

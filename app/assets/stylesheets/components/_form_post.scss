@@ -1,7 +1,6 @@
 .form-post {
   font-size: 20px;
-  margin-top: 50px;
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   text-align: center;
   margin-top: 20px;
   justify-content: space-around;
@@ -128,4 +127,8 @@ label:hover {
 weight: 12px;
 width: 40px;
 
+}
+
+.form-group {
+  margin-top: 1rem;
 }

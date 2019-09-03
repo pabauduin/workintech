@@ -12,6 +12,7 @@
 .play {
   display:flex;
   align-items: center;
+
 }
 
 .game-view .mountain img {
@@ -20,6 +21,8 @@
 
 .mountain {
   position:relative;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
 }
 
 .blur {
@@ -45,7 +48,10 @@
 
 .logo img{
   height: 70px;
-  margin-top: 20px;
+}
+
+#gameview {
+  opacity: 0.8;
 }
 
 #deaddragon {
@@ -59,6 +65,12 @@
 #victory {
   z-index: 5;
   position: absolute;
+}
+
+.concept {
+  background-color: $yellow;
+  padding:3px 5px;
+  border-radius: 3px;
 }
 
 
