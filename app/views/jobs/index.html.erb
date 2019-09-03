@@ -10,7 +10,7 @@
         <%= link_to job_path(job) do%>
           <div class="card-jobs m-3">
             <div class="content">
-              <h2><%= job.name %></h2>
+              <h2><%= job.name %> <%= image_tag job.job_type, alt: "alttext" %></h2>
               <%= job.short_description %>
             </div>
           </div>

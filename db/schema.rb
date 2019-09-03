@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_09_03_124916) do
     t.float "longitude"
     t.string "address"
     t.text "short_description"
+    t.string "job_type"
   end
 
   create_table "questions", force: :cascade do |t|
