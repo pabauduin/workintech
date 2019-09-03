@@ -683,7 +683,7 @@ dragons = Recommandation.create!(
 tintin = Recommandation.create!(
   name: "Tintin",
   age: "10",
-  genre: "Sci-fi"
+  genre: "Sci-fi",
   origine: "UE",
   image: "recommandations/tintin.jpg"
   )
