@@ -10,7 +10,7 @@ const variable1N = document.getElementById("variable1N")
 const variable2N = document.getElementById("variable2N")
 const variable3N = document.getElementById("variable3N")
 
-
+if (variable1 || variable1N) {
 
 // Auto submit Netflix
 function submit () {
@@ -102,5 +102,6 @@ if (variable3)
         })
     }
 
+};
 
 
