@@ -1,14 +1,19 @@
-  <div class="ellipse"></div>
+<div class="ellipse-back"></div>
+<div class="ellipse"></div>
 
 
   <div class="home-container container-fluid">
   <div class="catchphrase">
-    <div class="animated">
-      <h1 class="animated flash delay-5s">😎 Geek is the new sexy.</h1>
-    </div>
+
+      <h1 class="h1-home">😎 Geek is the new <span class="rainbow-text">SEXY</span></h1>
+
     <h2>Apprends le métier de développeur en t'amusant.</h2>
-    <p>Grâce à quelques jeux et un questionnaire de personnalité rapide, découvre les métiers et profils que tes entreprises préférées s'arrachent.</p>
-    <%= link_to "Démarrer", forms_path, method: :post, class: "button-red" %>
+    <p>Grâce à quelques jeux et un test de personnalité rapide, découvre les métiers et profils que tes entreprises préférées s'arrachent.</p>
+    <% if !cookies[:job].nil? %>
+      <%= link_to "Jouer", games_path, class: "button-red" %>
+    <% else %>
+      <%= link_to "Démarrer", forms_path, method: :post, class: "button-red" %>
+    <% end %>
   </div>
   <div class="bridge"></div>
   <div class="sun"></div>

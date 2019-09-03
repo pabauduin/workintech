@@ -1,7 +1,8 @@
 @media screen and (max-width: 1400px) {
-  .ellipse {
+  .ellipse, .ellipse-back {
     display:none;
   }
+
 }
 
 .ellipse {
@@ -17,6 +18,23 @@
     animation-name: nightandday;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    -webkit-mask-size: auto 100vh;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: bottom right;
+    position: absolute;
+}
+
+
+.ellipse-back {
+  z-index: -4;
+  background-color: $yellow;
+  mask-image: asset-url("ellipse-back.svg");
+      height: -webkit-fill-available;
+    width: 100vw;
+    right: 0;
+    -webkit-animation-duration: 23s;
+    animation-duration: 23s;
+
     -webkit-mask-size: auto 100vh;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: bottom right;

@@ -1,30 +1,46 @@
 <div class="fh-100 form-bg">
-   <div class="container game-index">
+  <div class="container game-index">
+
     <div class="m-h1">
       <h1 class="h1-ig">Joue et découvre le code :</h1>
     </div>
+
     <div class="fh">
       <div class="row">
+
+
         <% @games.each do |game| %>
           <%= link_to game_path(game) do  %>
-          <div class="col-12 col-md-6 margin-card">
-            <div class="big-card">
-              <div>
+          <div class="col-12 margin-card">
+            <% if cookies["#{game.id}"] == game.name %>
+              <div class="card-done">
+              <div class="check"><i class="fas fa-check-circle"></i></div>
+            <% else %>
+              <div class="big-card">
               <div class="game-logo"><%= image_tag game.logo, alt: "logo" %></div>
+            <% end %>
+            <div class="flex-grow-1 ml-3">
+                <h2>
+                  <%= game.name %>
+                  <% game.difficulty.times do %>
+                  <%= image_tag "skull.svg", alt: "difficulty", class: "difficulty" %>
+                  <% end %>
+                </h2>
+                <div class="content">
+                  <%= game.short_description %>
+                </div>
+                </div>
               </div>
-              <div>
-              <h2><%= image_tag game.game_type_image, alt: "game_type", class: "gametype" %><%= game.name %></h2>
-              <div class="content">
-                <%= game.short_description %>
-              </div></div>
-            </div>
           <% end %>
           </div>
-      <% end %>
+        <% end %>
+      </div>
+
+
+
+
+
       </div>
     </div>
   </div>
 </div>
-
-
-

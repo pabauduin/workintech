@@ -3,8 +3,16 @@ class AnswersController < ApplicationController
     @form     = Form.find(params[:form_id])
     @answer   = Answer.new
     @question_remain = Question.all - @form.questions
-    @firstname_question = Answer.all.detect { |a| a.points.count("a-zA-Z").positive? }
-    @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
+    @answers = Answer.all
+    @boy_or_girl = @answers.select { |answer| answer.points == "2" || answer.points == "-2" }
+
+    if @answers.count > 0
+      @firstname_question = @answers.detect { |a| a.points.count("a-zA-Z").positive? }
+      unless @firstname_question.nil?
+        @firstname = @firstname_question.points.gsub(/\r\n|\r|\n/, "").capitalize
+
+      end
+    end
 
     if @question_remain.empty?
       redirect_to form_path(params[:form_id])
