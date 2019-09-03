@@ -111,6 +111,17 @@
   margin-bottom: 20px;
 }
 
+
+.netflixcard {
+  display: flex;
+  flex-wrap: wrap(4);
+}
+
+.netflixcard img {
+  max-width: 100%;
+}
+
+
 .card-dragon {
   font-family: "VT323", monospace;
   background: white;

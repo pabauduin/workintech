@@ -13,6 +13,19 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
+  def netflix
+    @variable1N = params[:variable1N]
+    @variable2N = params[:variable2N]
+    @variable3N = params[:variable3N]
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    @recommandations = Recommandation.where(age: params[:variable1N]).where(origine: params[:variable2N]).where(genre: params[:variable3N])
+
+  end
+
+
   def update
     @game = Game.find(params[:id])
     if params[:variable3].present? && (params[:variable3] != @game.solution_variable3)
@@ -28,3 +41,4 @@ class GamesController < ApplicationController
     end
   end
 end
+
