@@ -51,6 +51,8 @@ puts 'Destroy all the games'
 Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
+School.destroy_all
+Recommandation.destroy_all
 
 Question.create!(
   description: "Quel est ton prénom ?",
@@ -214,6 +216,554 @@ dragon_revenge = Game.create!(
   difficulty: 3
 )
 
+puts "Creating Schools"
+
+epita = School.create!(
+  name: "EPITA",
+  latitude: 48.815881,
+  longitude: 2.362871
+)
+
+hetic = School.create!(
+  name: "HETIC",
+  latitude: 48.852190,
+  longitude: 2.420498
+)
+
+epitech = School.create!(
+  name: "EPITECH",
+  latitude: 48.815999,
+  longitude: 2.364218
+)
 
 puts "Success"
 
+puts "create Netflix Cards"
+
+columbo = Recommandation.create!(
+  name: "Columbo",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/columbo.jpg"
+  )
+
+fargo = Recommandation.create!(
+  name: "Fargo",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/fargo.png"
+  )
+
+murder = Recommandation.create!(
+  name: "Murder",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/murder.jpg"
+  )
+
+wire = Recommandation.create!(
+  name: "The Wire",
+  age: ["60", "20"],
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/thewire"
+  )
+
+himym = Recommandation.create!(
+  name: "HIMYM",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/himym.jpg"
+  )
+
+friends = Recommandation.create!(
+  name: "Friends",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/friends.jpg"
+  )
+
+bigbangtheory = Recommandation.create!(
+  name: "The BigBang Theory",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/bigbang.jpg"
+  )
+
+thegoodplace = Recommandation.create!(
+  name: "The Good Place",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/thegoodplace.jpg"
+  )
+
+utopia = Recommandation.create!(
+  name: "Utopia",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/utopia.jpg"
+  )
+
+alteredcarbon = Recommandation.create!(
+  name: "Altered Carbon",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/alteredcarbon.jpg"
+  )
+
+another_life = Recommandation.create!(
+  name: "Another Life",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/anotherlie.jpg"
+  )
+
+timeless= Recommandation.create!(
+  name: "Timeless",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/timeless.jpg"
+  )
+
+marseille = Recommandation.create!(
+  name: "Marseille",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/marseille.jpg"
+  )
+
+bureaudeslegendes = Recommandation.create!(
+  name: "Bureau des Légendes",
+  age: ["60", "20"],
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/bureaudeslegendes.png"
+  )
+
+engrenages = Recommandation.create!(
+  name: "Engrenage",
+  age: ["60", "20"],
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/engrenage.jpg"
+  )
+
+sherlock = Recommandation.create!(
+  name: "Sherlock",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/sherlock.jpg"
+  )
+
+josephine = Recommandation.create!(
+  name: "Joséphine Ange Gardien",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/josephine.jpg"
+  )
+
+cameracafe = Recommandation.create!(
+  name: "Caméra Café",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/cameracafe.jpg"
+  )
+
+ungarsunefille = Recommandation.create!(
+  name: "Un gars, Une fille",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/ungarsunefillle.jpg"
+  )
+
+montypython = Recommandation.create!(
+  name: "Monty Python",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/montypython.jpg"
+  )
+
+osmosis = Recommandation.create!(
+  name: "Osmosis",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/osmosis.jpg"
+  )
+
+lesrevenants = Recommandation.create!(
+  name: "Les Revenants",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/lesrevenants.jpg"
+  )
+
+realhumans = Recommandation.create!(
+  name: "Real Humans",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/realhumans.jpg"
+  )
+
+braquo = Recommandation.create!(
+  name: "braquo",
+  age: "20",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/braquo.jpg"
+  )
+
+borgen = Recommandation.create!(
+  name: "Borgen",
+  age: "20",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/borgen.jpeg"
+  )
+
+plusbellelavie = Recommandation.create!(
+  name: "Plus Belle La Vie",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/plusbellelavie.jpg"
+  )
+
+plancoeur = Recommandation.create!(
+  name: "Plan Coeur",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/plancoeur.jpg"
+  )
+
+dixpourcent = Recommandation.create!(
+  name: "10%",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/dixpourcent.jpg"
+  )
+
+sexeducation = Recommandation.create!(
+  name: "Sex Education",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/sexeeducation.jpg"
+  )
+
+advitam = Recommandation.create!(
+  name: "Ad Vitam",
+  age: ["20", "60"],
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/advitam.png"
+  )
+
+dark = Recommandation.create!(
+  name: "Dark",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/dark.jpeg"
+  )
+
+blackmirror = Recommandation.create!(
+  name: "Black Mirror",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/blackmirror.jpg"
+  )
+
+misfits = Recommandation.create!(
+  name: "Misfits",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/misfits.jpg"
+  )
+
+bodyguard = Recommandation.create!(
+  name: "Bodyguard",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/bodyguard.jpg"
+  )
+
+mindhunter = Recommandation.create!(
+  name: "Mindhunter",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/mindhunter.jpg"
+  )
+
+suits = Recommandation.create!(
+  name: "Suits",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/suits.jpg"
+  )
+
+ rickandmorty = Recommandation.create!(
+  name: "Rick & Morty",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/rickandmorty.jpg"
+  )
+
+ bojack = Recommandation.create!(
+  name: "Bojack Horseman",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/bojack.jpg"
+  )
+
+ brookling99 = Recommandation.create!(
+  name: "Brookling 99",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "casadepapel.jpeg"
+  )
+
+riverdale = Recommandation.create!(
+  name: "Riverdale",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/riverdale.png"
+  )
+
+sense8 = Recommandation.create!(
+  name: "Sense 8",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/sense8.jpg"
+  )
+
+the100 = Recommandation.create!(
+  name: "The 100",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/the100.jpg"
+  )
+
+theOA = Recommandation.create!(
+  name: "The OA",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/theOA.jpg"
+  )
+
+sabrina = Recommandation.create!(
+  name: "Sabrina",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/sabrina.png"
+  )
+
+patpatrouille = Recommandation.create!(
+  name: "PatPatrouille",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/patpatrouille.jpeg"
+  )
+
+robocar = Recommandation.create!(
+  name: "Robocar",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/robocar.jpeg"
+  )
+
+dora = Recommandation.create!(
+  name: "Dora l'Exploratrice",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/dora.jpg"
+  )
+
+leclubdes5 = Recommandation.create!(
+  name: "Le club des 5",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/leclubdes5.jpg"
+  )
+
+peppapig = Recommandation.create!(
+  name: "Peppa Pig",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/peppapig.png"
+  )
+
+zinzins = Recommandation.create!(
+  name: "les Zinzins de l'espace",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/zinzin.jpg"
+  )
+
+trotro = Recommandation.create!(
+  name: "Trotro",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/trotro.jpg"
+  )
+
+lapinscretins = Recommandation.create!(
+  name: "Les lapins crétins",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/lapincretins.jpg"
+  )
+
+wakfu = Recommandation.create!(
+  name: "wakfu",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/wakfu.jpg"
+  )
+
+martinmatin = Recommandation.create!(
+  name: "Martin Matin",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/martinmatin.jpg"
+  )
+
+dragons = Recommandation.create!(
+  name: "Dragons",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/dragons.png"
+  )
+
+tintin = Recommandation.create!(
+  name: "Tintin",
+  age: "10",
+  genre: "Sci-fi"
+  origine: "UE",
+  image: "recommandations/tintin.jpg"
+  )
+
+tortueninja = Recommandation.create!(
+  name: "Tortues Ninjas",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/tortuesninjas.jpg"
+  )
+
+batman = Recommandation.create!(
+  name: "Batman",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/batman.jpg"
+  )
+
+pyjamasks = Recommandation.create!(
+  name: "Pyjamasks",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/pyjamask.png"
+  )
+
+piccou = Recommandation.create!(
+  name: "Picsou",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/picsou.jpeg"
+  )
+
+spiderman = Recommandation.create!(
+  name: "Spiderman",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/spiderman.1jpeg"
+  )
+
+octonautes = Recommandation.create!(
+  name: "Les Octonautes",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/octonautes.jpg"
+  )
+
+ben10 = Recommandation.create!(
+  name: "Ben 10",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/ben10.jpeg"
+  )
+
+ironman = Recommandation.create!(
+  name: "ironman",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/ironman.jpg"
+  )
+
+lego = Recommandation.create!(
+  name: "Lego",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/lego.jpg"
+  )
+
+superman = Recommandation.create!(
+  name: "Superman",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/superman.jpg"
+  )
