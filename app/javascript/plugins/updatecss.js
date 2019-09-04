@@ -10,26 +10,41 @@ const variable1N = document.getElementById("variable1N")
 const variable2N = document.getElementById("variable2N")
 const variable3N = document.getElementById("variable3N")
 
+// -----------------------------------------------------------
+// JEU NETFLIX :
+
+// Fonction Auto submit Netflix
 if (variable1 || variable1N) {
 
 // Auto submit Netflix
 function submit () {
-  document.getElementById('netflixForm').submit();
+  document.getElementById("netflixForm").submit();
 };
 
 // jeu Netflix
 if (variable1N)
   {document.getElementById("netflixForm").addEventListener(`change`,(event) =>
-  {event.preventDefault()
-   submit()
+   {event.preventDefault();
+    submit()
   })};
+
+if (variable1N)
+    {
+      if (variable3N.value === "Sci-fi" && variable2N.value === "UE" && variable1N.value ==="10")
+        { victory.style.display = "block";
+          netflixbtn.style.display = "block"
+        }
+    }
+// --------------------------------------------------------------------------------
+// DRAGON QUEST
 
 // Affectation de valeur par défaut
 if (variable1) {variable1.value = "1"}
 if (variable2) {variable2.value = "blue"}
 if (variable3) {variable3.value = "30"}
 
-// Jeu 1
+
+// MOUVEMENT CSS & AFFICHAGE RESULTAT
 if (name.innerHTML != " Trump {") {
   document.getElementById("variable1").addEventListener('change', (event) =>
     {
@@ -42,11 +57,14 @@ if (name.innerHTML != " Trump {") {
           hero.style.right = `30%`
           deaddragon.style.display = "block"
           setTimeout(function() { victory.style.display = "block";}, 500);
+          setTimeout(function() { btngame.style.display = "block";}, 500);
         }
     });
 };
+// --------------------------------------------------------------------------------
+// TRUMP
 
-// jeu 2 : mouvement de CSS
+// Mouvement de CSS
 if (variable2)
   {
     hero.style.filter = `saturate(10000%) hue-rotate(225deg)`;
@@ -82,26 +100,25 @@ if (variable3)
 
       });
   }
-// jeu 2 affichage du victory
+// Affichage du victory
   if (name.innerHTML === " Trump {")
     {
       document.getElementById("variable1").addEventListener(`change`, (event) =>
         {
           if (variable3.value === "10" && variable2.value=== "red" && variable1.value==="3")
-            {victory.style.display = "block"}
+            {victory.style.display = "block";
+            btngame.style.display = "block"}
         })
       document.getElementById("variable2").addEventListener(`change`, (event) =>
         {
           if (variable3.value === "10" && variable2.value=== "red" && variable1.value==="3")
-            {victory.style.display = "block"}
+            {victory.style.display = "block";
+            btngame.style.display = "block"}
         })
       document.getElementById("variable3").addEventListener(`change`, (event) =>
         {
           if (variable3.value === "10" && variable2.value=== "red" && variable1.value==="3")
-            {victory.style.display = "block"}
+            {victory.style.display = "block";
+            btngame.style.display = "block"}
         })
     }
-
-};
-
-
