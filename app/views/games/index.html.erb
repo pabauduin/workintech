@@ -10,7 +10,7 @@
       <div class="row">
 
 
-        <% @games.each do |game| %>
+        <% @games_sorted.each do |game| %>
           <%= link_to game_path(game) do  %>
           <div class="col-12 margin-card">
             <% if cookies["#{game.id}"] == game.name %>
@@ -36,11 +36,6 @@
           </div>
         <% end %>
       </div>
-
-
-
-
-
       </div>
     </div>
   </div>
