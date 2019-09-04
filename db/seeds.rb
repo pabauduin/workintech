@@ -218,23 +218,62 @@ dragon_revenge = Game.create!(
 
 puts "Creating Schools"
 
-epita = School.create!(
-  name: "EPITA",
-  latitude: 48.815881,
-  longitude: 2.362871
+
+le_wagon_bordeaux = School.create!(
+  name: "Le wagon Bordeaux",
+  latitude: 44.859499,
+  longitude: -0.565004,
+  city: "bordeaux"
 )
 
-hetic = School.create!(
-  name: "HETIC",
-  latitude: 48.852190,
-  longitude: 2.420498
+le_wagon_paris = School.create!(
+  name: "Le wagon Bordeaux",
+  latitude: 48.864989,
+  longitude: 2.379842,
+  city: "paris"
 )
+
+kedge_marseille = School.create!(
+  name: "Le wagon Bordeaux",
+  latitude: 43.232387,
+  longitude: 5.433733,
+  city: "marseille"
+)
+
 
 epitech = School.create!(
   name: "EPITECH",
-  latitude: 48.815999,
-  longitude: 2.364218
+  latitude: 50.636973,
+  longitude: 3.062251,
+  city: "lille"
 )
+
+le_wagon_lyon = School.create!(
+  name: "LE WAGON Lyon",
+  latitude: 45.769664,
+  longitude: 4.834923,
+  city: "lyon"
+)
+
+
+le_wagon_nantes = School.create!(
+  name: "LE WAGON Nantes",
+  latitude: 47.218158,
+  longitude: -1.542955,
+  city: "nantes"
+)
+
+
+
+
+le_wagon_lille = School.create!(
+  name: "LE WAGON lille",
+  latitude: 50.633349,
+  longitude: 3.018990,
+  city: "lille"
+)
+
+
 
 puts "Success"
 
