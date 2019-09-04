@@ -5,11 +5,13 @@ class JobsController < ApplicationController
 
   def show
     @job  = Job.find(params[:id])
-    @markers = [{
-      lat: @job.latitude,
-      lng: @job.longitude
-    }]
+    @schools = School.all
+
+    @markers = @schools.map do |school|
+      {
+        lat: school.latitude,
+        lng: school.longitude
+      }
+    end
   end
-
-
 end

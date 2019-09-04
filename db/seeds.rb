@@ -15,7 +15,8 @@ Job.create!(
   name: "Developpeur Front-End",
   short_description: "Le développeur front-end est en charge des parties des applications ou des sites web qui sont visibles directement par les utilisateurs et avec lesquelles ces derniers peuvent interagir.",
   description: "Le Développeur Front-End est en charge d’optimiser l’ergonomie et la navigation d’un site web. Contrairement au Développeur Back-End, le Développeur Front-End ne vit pas dans l’ombre. Son travail est visible à l’écran et le rendu est l’élément premier que l’utilisateur verra. Afin de rendre l’interface des utilisateurs agréable, le Développeur Front-End se tient régulièrement informé des évolutions web. Son objectif est de proposer un site internet ergonomique et accessible. Pour cela, une connaissance approfondie des normes du W3C lui est nécessaire.",
-  address: "2 avenue des saules",
+  job_type: "bubble-front.svg",
+  address: "2 avenue des saules"
 )
 
 
@@ -24,7 +25,8 @@ Job.create!(
   short_description: "Le programmeur back-end se charge de la mise en place, de la configuration, du développement et de la maintenance du serveur, de la base de données et de l’application web en général.",
   description: "Le Développeur Back-End est en charge de l’ensemble des fonctionnalités d’un site web. A la différence du Développeur Front-End, le Développeur Back-End ne s’occupe pas de l’aspect ergonomique du site mais de l’aspect technique et fonctionnel. Il travaille dans l’ombre. Il peut concevoir un site web et dans ce cas réaliser lui-même l’architecture technique du site ; ou bien rester sur la plateforme instaurée et adapter des solutions techniques sur celle-ci.
 S’il crée le site, il devra partir de zéro et prendre en considération les inconvénients auxquels il devra faire face.",
-  address: "2 avenue des saules",
+  job_type: "bubble-back.svg",
+  address: "2 avenue des saules"
 
 )
 
@@ -33,20 +35,23 @@ Job.create!(
   name: "Product Owner",
   short_description: "Chef d’orchestre, le PO fait le lien entre les clients et les équipes internes (techniques, marketing et design). C'est un véritable manager du projet et doit avoir des compétences multiples.",
   description: "Le Product Owner ou PO est le responsable de la définition et de la conception d’un produit. Expert de la méthodologie agile, il fait le lien entre la partie métier (bonne vision business) et la partie technique du projet. Il doit porter la vision du produit. Il est l’interface entre l’utilisateur, le Scrum Master et les équipes chargées du développement. Ce métier est souvent considéré comme étant un nouveau type de Chef de Projet, la responsabilité principale est de définir un produit qui apportera le maximum de valeur métier aux utilisateurs dans le temps et le budget impartis au projet.",
-  address: "2 avenue des saules",
+  job_type: "bubble-product.svg",
+  address: "2 avenue des saules"
 )
 
 Job.create!(
   name: "Designer",
   short_description: "Il devra avant tout être créatif et imaginatif. Posséder une fibre artistique serait un atout non négligeable dans ce métier. Il devra savoir dessiner.",
   description: "Mi-graphiste, mi-informaticien, le web- designer est spécialisé dans la création des pages Web. Il s'occupe de tout l'aspect graphique d'un site Internet (illustrations, animations, typographie...). Il choisit la place des photos, la taille des caractères et les couleurs qui rendront la consultation agréable pour l'utilisateur. Il crée aussi les pictogrammes qui facilitent la lecture et la navigation dans le site. Dans certains cas, il sera amené à établir la charte graphique et à créer l'identité visuelle du site. C'est un exercice délicat car il faut respecter à la fois la demande du client, les impératifs de marketing et de communication, et ceux du public visé",
-  address: "2 avenue des saules",
+  job_type: "bubble-design.svg",
+  address: "2 avenue des saules"
 )
 
 puts 'Destroy all the games'
 Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
+School.destroy_all
 Recommandation.destroy_all
 
 Question.create!(
@@ -143,7 +148,7 @@ dragon_quest = Game.create!(
   game_type: "Frontend",
   description: "Le dragon attaque votre village. Approche-toi suffisamment pour le combattre et le tuer !",
   concept: "Dans ce premier jeu tu devras jouer avec la <span class='concept'>marge</span> qu'il y a entre toi et le dragon. C'est une propriété qu'utilisent souvent les développeurs pour aligner les éléments sur le site.",
-  short_description: "Approchez vous du dragon et tuez le !",
+  short_description: "Approche-toi du dragon et sauve la princesse !",
   variable1: "margin",
   background_image: "mountain-game.svg",
   action_image: "hero.svg",
@@ -177,7 +182,7 @@ netflix = Game.create!(
   name: "Netflix",
   game_type: "Backend",
   description: "Le code de Netflix est cassé, et les recommandations ne sont plus du tout adaptées. Améliore le code pour améliorer les recommandations.",
-  short_description: "Améliorer les recommandations de Netflix.",
+  short_description: "Les recommandations de Netflix sont cassées. Répare l'algorithme !",
   concept: "Pour ce premier exercice Back-end, on te demande de changer certaines <span class='concept'>conditions</span> pour modifier l'algorithme. Le travail d'un développeur est de travailler sur ces <span class='concept'>conditions</span> pour personnaliser le site internet.",
   variable1: "marge",
   variable2: "color",
@@ -211,6 +216,25 @@ dragon_revenge = Game.create!(
   difficulty: 3
 )
 
+puts "Creating Schools"
+
+epita = School.create!(
+  name: "EPITA",
+  latitude: 48.815881,
+  longitude: 2.362871
+)
+
+hetic = School.create!(
+  name: "HETIC",
+  latitude: 48.852190,
+  longitude: 2.420498
+)
+
+epitech = School.create!(
+  name: "EPITECH",
+  latitude: 48.815999,
+  longitude: 2.364218
+)
 
 puts "Success"
 

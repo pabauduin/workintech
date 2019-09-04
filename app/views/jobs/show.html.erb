@@ -1,35 +1,28 @@
-<div class="container-job">
-  <div class="row-jobs">
-      <div class="presentation-job">
-        <h1>Découvre le métier de:</h1>
+<div class="margin-title">
+<div class="container">
+  <h1><%= @job.name %></h2>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <div class="card-job-show">
+          <p><%= @job.description %></p>
+
+        </div>
+
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/DTJSASD8VHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div class="col-12 col-md-6">
+        <div
+        id="map"
+        style="width: 500px;
+        height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV["MAPBOX_API_KEY"] %>"></div>
 
-      <div class="job-title">
-          <h2><%= @job.name %></h2>
-      </div>
 
 
-      <div class="card-job-show">
-        <p><%= @job.description %></p>
-      </div>
 
-  </div>
-
-  <div class ="row d-flex justify-content-around">
-    <div class="video">
-      <iframe width="600" height="300" src="https://www.youtube.com/embed/DTJSASD8VHk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div
-      id="map"
-      style="width: 600px;
-      height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 
   </div>
 </div>
-
-
-
+</div>

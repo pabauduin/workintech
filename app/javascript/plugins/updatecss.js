@@ -14,6 +14,9 @@ const variable3N = document.getElementById("variable3N")
 // JEU NETFLIX :
 
 // Fonction Auto submit Netflix
+if (variable1 || variable1N) {
+
+// Auto submit Netflix
 function submit () {
   document.getElementById("netflixForm").submit();
 };
@@ -119,4 +122,3 @@ if (variable3)
             btngame.style.display = "block"}
         })
     }
-

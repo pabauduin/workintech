@@ -1,7 +1,7 @@
 .big-card {
-  background: $white;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,15 +10,15 @@
   height: 140px;
 }
 
-.big-card h2 {
+.big-card h2, .card-done h2 {
   font-size: 22px !important;
 }
 
 .card-done {
-  background-color: rgba(255,255,255,0.6);
-  color:$lightblue;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #ffce45 0%, #ffbc00 28%, transparent 50%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #ffe08b -2%, #ffcd41 25%, #f5b923 72.5%);
+  color: $blue;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: 15px;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -45,13 +45,12 @@
 
 .check {
   font-size: 50px;
-  color: $lightblue;
+  color: $blue;
 
 }
 
 .big-card:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  outline: 2px solid $red;
 }
 
 .small-card {
@@ -84,30 +83,20 @@
 
 .card-jobs {
   background:    $white;
-  box-shadow:    0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow:    0px 0px 5px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  height:        320px;
+  height:        230px;
   padding:       20px;
 }
 
-.title{
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  align-items: center;
-}
 
-
-.card-job-show{
+.card-job-show {
   display:flex;
   position: left;
   justify-content: left;
   letter-spacing: 1px;
   font-size: 20px;
-  font-family: arial;
-  text-align: justify;
   margin:0 auto;
-
 }
 
 .presentation-job{
@@ -143,6 +132,7 @@
   height: 50px;
   font-size: 22px;
   position: absolute;
+  line-height: 1;
   top: 100px;
   z-index: 10;
   width: 80%;
@@ -219,4 +209,11 @@
   border:2px $yellow solid;
   font-family: "NotoSerif", serif;
   top:80px;
+}
+
+.card-jobs img {
+    vertical-align: middle;
+    border-style: none;
+    width: 80px;
+    padding: 10px;
 }
