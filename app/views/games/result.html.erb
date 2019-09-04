@@ -1,10 +1,10 @@
-<div class="fh-100 result">
-<div class="container">
+<div class="fh-100">
+<div class="container-fluid">
   <div class="row align-items-center">
 
   <!-- condition front -->
   <% if @game.game_type == "Front" %>
-    <div class="col-12 col-md-6 d-flex justify-content-around">
+    <div class="col-12 col-md-6 d-flex justify-content-around fh-100">
       <div class="char-trophee">
     <%= image_tag "boy-front.svg", alt: "alttext", class: "character" %>
     <%= image_tag "trophee.svg", alt: "trophee", class: "trophee" %>
@@ -12,7 +12,7 @@
     </div>
 
   <% else %>
-  <div class="col-12 col-md-6 d-flex justify-content-around">
+  <div class="col-12 col-md-6 d-flex justify-content-around bg-left bg-blue fh-100">
     <div class="char-trophee">
     <%= image_tag "boy-back.svg", alt: "alttext", class: "character" %>
     <%= image_tag "trophee.svg", alt: "trophee", class: "trophee" %>
@@ -20,9 +20,9 @@
     </div>
    <% end %>
     </div>
-    <div class="col-12 col-md-6">
-
-    <h1>Bravo !</h1>
+    <div class="col-12 col-md-6 fh-100 bg-right">
+  <div class="display-right">
+        <h1>Bravo !</h1>
       <h2>Tu as réussi l'exercice " <%= @game.name %> " </h2>
       <p>Continue à jouer pour en apprendre plus sur le métier de développeur.</p>
       <% cookies[:score] = cookies[:score].to_i + @game.difficulty %>
@@ -32,6 +32,8 @@
         <%= link_to "Fiche métier", jobs_path, class: "button-red-2" %>
       </div>
     </div>
+  </div>
+
 
   </div>
 </div>
