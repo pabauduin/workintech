@@ -38,10 +38,18 @@
 <p style="margin-top:20px;"><%= @job.description %></p>
 
       </div>
-
       <div class="col-12 col-md-10">
         <div class="card-job-show">
         <h2>Les écoles conseillées :</h2>
+           <div class="barre-recherche">
+
+          <%= form_tag job_path, method: :get, class: "form-inline" do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find a school" %>
+            <%= submit_tag 'Find', class: "btn" %>
+          <% end %>
         <div
         id="map"
         style="    width: 100%;
@@ -51,9 +59,6 @@
 
 </div>
 </div>
-
-
-
 
 
 

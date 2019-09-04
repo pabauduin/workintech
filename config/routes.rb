@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'recommandations/new'
   get 'recommandations/create'
   get 'games/netflix', to: 'games#netflix', as: 'netflix'
+  get 'games/resultnetflix', to: 'games#resultnetflix', as: 'resultnetflix'
   root to: 'pages#home'
     resources :forms, only:[:show, :new, :create] do
       resources :answers, only:[:new, :create]
