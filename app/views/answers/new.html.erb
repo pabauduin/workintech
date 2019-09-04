@@ -1,12 +1,14 @@
-<div class="fh-100 form-bg">
-<div class="container form-container">
+<div class="fh-100 bg-yellow">
+  <div class="top-bg">
+<div class="container form-container margin-title">
 
-<div class="form-post-h1">
-  <%= image_tag "heart.svg", alt: "alttext" %>
-  <h1>Test de personnalité</h1>
+<div class="h1-ig form-post-h1">
+
+  <h1><%= image_tag "heart.svg", alt: "heart" %> Test de personnalité</h1>
 </div>
 
 <div class="form-post">
+
 <%= @question.description %>
 
 <%= simple_form_for [@form, @answer] do |f| %>
@@ -27,7 +29,7 @@
   <% elsif @question.description.include?("prénom") %>
     <%= f.input :points, label: false %>
     <%= f.input :question_id, label: false, id: "firstname", input_html: { value:"#{@question.id}", class: "d-none"} %>
-    <%= f.submit :submit, class: "button-red", value: "update" %>
+    <%= f.submit :submit, class: "button-red", value: "Valider" %>
 
 
   <% else %>
@@ -45,4 +47,4 @@
   </div>
 </div>
 </div>
-</div>
+</div></div>
