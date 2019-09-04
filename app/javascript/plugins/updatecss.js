@@ -122,3 +122,4 @@ if (variable3)
             btngame.style.display = "block"}
         })
     }
+};
