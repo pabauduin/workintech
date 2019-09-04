@@ -1,5 +1,5 @@
 .big-card {
-  background: rgba(255, 255, 255, 0.95);
+  background:  $white;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   display: flex;
@@ -91,12 +91,12 @@
 
 
 .card-job-show {
-  display:flex;
   position: left;
-  justify-content: left;
   letter-spacing: 1px;
   font-size: 20px;
   margin:0 auto;
+  margin-top:50px;
+  color: white;
 }
 
 .presentation-job{
@@ -215,4 +215,45 @@
     border-style: none;
     width: 80px;
     padding: 10px;
+}
+
+.mini-card{
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  color: black;
+  padding-top: 130px;
+  z-index: -10;
+  margin-top: -56px;
+  position: fixed;
+  right: 50px;
+  width:250px;
+}
+
+.mini-card h3 {
+  font-size:20px;
+  background-color: $light-gray;
+  border-radius:10px;
+  color: $darkblue;
+  padding:15px;
+}
+
+.card-job-show h2 {
+  color: $blue;
+}
+
+.mini-card li {
+  font-size:14px;
+  list-style-type: none;
+}
+.mini-card ul {
+  padding:10px;
+}
+
+
+.mini-card .far, .fas {
+  color: $darkblue;
 }
