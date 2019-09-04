@@ -1,0 +1,41 @@
+<div class="game">
+    <h2 style= "margin-left : 730px">Notre sélection pour ...</h2>
+  <div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6">
+       <div id="sublime", class="sublime-grid-container">
+          <%= form_for("", method: "get",:html => {:id => "netflixForm"}, :remote => true) do |f| %>
+            <div class="sublime-item-1">1</div>
+            <div class="sublime-item-2">Netflix {</div>
+            <div class="sublime-item-3">2</div>
+            <div class="sublime-item-4">age = <%= f.select :variable1N, options_for_select(["10", "20", "60"], params[:variable1N])  %></div>
+            <div class="sublime-item-5">3</div>
+            <div class="sublime-item-6">origine = <%= f.select :variable2N, options_for_select(["UE", "US"], params[:variable2N]) %></div>
+            <div class="sublime-item-7">4</div>
+            <div class="sublime-item-8">genre = <%= f.select :variable3N, options_for_select(["Police", "Comédie", "Sci-fi"], params[:variable3N]) %></div>
+            <div class="sublime-item-9">5</div>
+            <div class="sublime-item-10">}</div>
+            <div class="sublime-item-11">6</div>
+            <div class="sublime-item-12"></div>
+            <div class="sublime-item-13">7</div>
+            <div class="sublime-item-14"></div>
+            <input type="submit" value="Submit" />
+            <% end %>
+
+       </div>
+    </div>
+  <div class="col-12 col-md-6">
+        <div class= "netflixcard">
+          <% @recommandations.each do |recommandation| %>
+          <div class="card" style="width: 15rem;">
+          <%= recommandation.name %>
+          <%= image_tag recommandation.image %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+</div>

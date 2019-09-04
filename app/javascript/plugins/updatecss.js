@@ -6,7 +6,23 @@ const variable3 = document.getElementById("variable3");
 const victory = document.getElementById("victory");
 const deaddragon = document.getElementById("deaddragon");
 const name = document.getElementById("gamename");
-console.log(name.innerHTML);
+const variable1N = document.getElementById("variable1N")
+const variable2N = document.getElementById("variable2N")
+const variable3N = document.getElementById("variable3N")
+
+if (variable1 || variable1N) {
+
+// Auto submit Netflix
+function submit () {
+  document.getElementById('netflixForm').submit();
+};
+
+// jeu Netflix
+if (variable1N)
+  {document.getElementById("netflixForm").addEventListener(`change`,(event) =>
+  {event.preventDefault()
+   submit()
+  })};
 
 // Affectation de valeur par défaut
 if (variable1) {variable1.value = "1"}
@@ -85,3 +101,7 @@ if (variable3)
             {victory.style.display = "block"}
         })
     }
+
+};
+
+

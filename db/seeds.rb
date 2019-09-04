@@ -15,7 +15,8 @@ Job.create!(
   name: "Developpeur Front-End",
   short_description: "Le développeur front-end est en charge des parties des applications ou des sites web qui sont visibles directement par les utilisateurs et avec lesquelles ces derniers peuvent interagir.",
   description: "Le Développeur Front-End est en charge d’optimiser l’ergonomie et la navigation d’un site web. Contrairement au Développeur Back-End, le Développeur Front-End ne vit pas dans l’ombre. Son travail est visible à l’écran et le rendu est l’élément premier que l’utilisateur verra. Afin de rendre l’interface des utilisateurs agréable, le Développeur Front-End se tient régulièrement informé des évolutions web. Son objectif est de proposer un site internet ergonomique et accessible. Pour cela, une connaissance approfondie des normes du W3C lui est nécessaire.",
-  address: "2 avenue des saules",
+  job_type: "bubble-front.svg",
+  address: "2 avenue des saules"
 )
 
 
@@ -24,7 +25,8 @@ Job.create!(
   short_description: "Le programmeur back-end se charge de la mise en place, de la configuration, du développement et de la maintenance du serveur, de la base de données et de l’application web en général.",
   description: "Le Développeur Back-End est en charge de l’ensemble des fonctionnalités d’un site web. A la différence du Développeur Front-End, le Développeur Back-End ne s’occupe pas de l’aspect ergonomique du site mais de l’aspect technique et fonctionnel. Il travaille dans l’ombre. Il peut concevoir un site web et dans ce cas réaliser lui-même l’architecture technique du site ; ou bien rester sur la plateforme instaurée et adapter des solutions techniques sur celle-ci.
 S’il crée le site, il devra partir de zéro et prendre en considération les inconvénients auxquels il devra faire face.",
-  address: "2 avenue des saules",
+  job_type: "bubble-back.svg",
+  address: "2 avenue des saules"
 
 )
 
@@ -33,20 +35,24 @@ Job.create!(
   name: "Product Owner",
   short_description: "Chef d’orchestre, le PO fait le lien entre les clients et les équipes internes (techniques, marketing et design). C'est un véritable manager du projet et doit avoir des compétences multiples.",
   description: "Le Product Owner ou PO est le responsable de la définition et de la conception d’un produit. Expert de la méthodologie agile, il fait le lien entre la partie métier (bonne vision business) et la partie technique du projet. Il doit porter la vision du produit. Il est l’interface entre l’utilisateur, le Scrum Master et les équipes chargées du développement. Ce métier est souvent considéré comme étant un nouveau type de Chef de Projet, la responsabilité principale est de définir un produit qui apportera le maximum de valeur métier aux utilisateurs dans le temps et le budget impartis au projet.",
-  address: "2 avenue des saules",
+  job_type: "bubble-product.svg",
+  address: "2 avenue des saules"
 )
 
 Job.create!(
   name: "Designer",
   short_description: "Il devra avant tout être créatif et imaginatif. Posséder une fibre artistique serait un atout non négligeable dans ce métier. Il devra savoir dessiner.",
   description: "Mi-graphiste, mi-informaticien, le web- designer est spécialisé dans la création des pages Web. Il s'occupe de tout l'aspect graphique d'un site Internet (illustrations, animations, typographie...). Il choisit la place des photos, la taille des caractères et les couleurs qui rendront la consultation agréable pour l'utilisateur. Il crée aussi les pictogrammes qui facilitent la lecture et la navigation dans le site. Dans certains cas, il sera amené à établir la charte graphique et à créer l'identité visuelle du site. C'est un exercice délicat car il faut respecter à la fois la demande du client, les impératifs de marketing et de communication, et ceux du public visé",
-  address: "2 avenue des saules",
+  job_type: "bubble-design.svg",
+  address: "2 avenue des saules"
 )
 
 puts 'Destroy all the games'
 Game.destroy_all
 Answer.destroy_all
 Question.destroy_all
+School.destroy_all
+Recommandation.destroy_all
 
 Question.create!(
   description: "Quel est ton prénom ?",
@@ -142,7 +148,7 @@ dragon_quest = Game.create!(
   game_type: "Frontend",
   description: "Le dragon attaque votre village. Approche-toi suffisamment pour le combattre et le tuer !",
   concept: "Dans ce premier jeu tu devras jouer avec la <span class='concept'>marge</span> qu'il y a entre toi et le dragon. C'est une propriété qu'utilisent souvent les développeurs pour aligner les éléments sur le site.",
-  short_description: "Approchez vous du dragon et tuez le !",
+  short_description: "Approche-toi du dragon et sauve la princesse !",
   variable1: "margin",
   background_image: "mountain-game.svg",
   action_image: "hero.svg",
@@ -176,7 +182,7 @@ netflix = Game.create!(
   name: "Netflix",
   game_type: "Backend",
   description: "Le code de Netflix est cassé, et les recommandations ne sont plus du tout adaptées. Améliore le code pour améliorer les recommandations.",
-  short_description: "Améliorer les recommandations de Netflix.",
+  short_description: "Les recommandations de Netflix sont cassées. Répare l'algorithme !",
   concept: "Pour ce premier exercice Back-end, on te demande de changer certaines <span class='concept'>conditions</span> pour modifier l'algorithme. Le travail d'un développeur est de travailler sur ces <span class='concept'>conditions</span> pour personnaliser le site internet.",
   variable1: "marge",
   variable2: "color",
@@ -210,6 +216,562 @@ dragon_revenge = Game.create!(
   difficulty: 3
 )
 
+puts "Creating Schools"
+
+epita = School.create!(
+  name: "EPITA",
+  latitude: 48.815881,
+  longitude: 2.362871
+)
+
+hetic = School.create!(
+  name: "HETIC",
+  latitude: 48.852190,
+  longitude: 2.420498
+)
+
+epitech = School.create!(
+  name: "EPITECH",
+  latitude: 48.815999,
+  longitude: 2.364218
+)
 
 puts "Success"
 
+puts "create Netflix Cards"
+
+columbo = Recommandation.create!(
+  name: "Columbo",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/columbo.jpg"
+  )
+
+fargo = Recommandation.create!(
+  name: "Fargo",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/fargo.png"
+  )
+
+murder = Recommandation.create!(
+  name: "Murder",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/murder.jpg"
+  )
+
+wire = Recommandation.create!(
+  name: "The Wire",
+  age: "60",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/thewire.jpeg"
+  )
+
+himym = Recommandation.create!(
+  name: "HIMYM",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/himym.jpg"
+  )
+
+friends = Recommandation.create!(
+  name: "Friends",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/friends.jpg"
+  )
+
+bigbangtheory = Recommandation.create!(
+  name: "The BigBang Theory",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/bigbang.jpg"
+  )
+
+thegoodplace = Recommandation.create!(
+  name: "The Good Place",
+  age: "60",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/thegoodplace.jpg"
+  )
+
+utopia = Recommandation.create!(
+  name: "Utopia",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/utopia.jpg"
+  )
+
+alteredcarbon = Recommandation.create!(
+  name: "Altered Carbon",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/alteredcarbon.jpg"
+  )
+
+another_life = Recommandation.create!(
+  name: "Another Life",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/anotherlie.jpg"
+  )
+
+timeless= Recommandation.create!(
+  name: "Timeless",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/timeless.jpg"
+  )
+
+marseille = Recommandation.create!(
+  name: "Marseille",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/marseille.jpg"
+  )
+
+bureaudeslegendes = Recommandation.create!(
+  name: "Bureau des Légendes",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/bureaudeslegendes.png"
+  )
+
+engrenages = Recommandation.create!(
+  name: "Engrenage",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/engrenage.jpg"
+  )
+
+sherlock = Recommandation.create!(
+  name: "Sherlock",
+  age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/sherlock.jpg"
+  )
+
+josephine = Recommandation.create!(
+  name: "Joséphine Ange Gardien",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/josephine.jpg"
+  )
+
+cameracafe = Recommandation.create!(
+  name: "Caméra Café",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/cameracafe.jpg"
+  )
+
+ungarsunefille = Recommandation.create!(
+  name: "Un gars, Une fille",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/ungarsunefillle.jpg"
+  )
+
+montypython = Recommandation.create!(
+  name: "Monty Python",
+  age: "60",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/montypython.jpg"
+  )
+
+osmosis = Recommandation.create!(
+  name: "Osmosis",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/osmosis.jpg"
+  )
+
+lesrevenants = Recommandation.create!(
+  name: "Les Revenants",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/lesrevenants.jpg"
+  )
+
+realhumans = Recommandation.create!(
+  name: "Real Humans",
+  age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/realhumans.jpg"
+  )
+
+braquo = Recommandation.create!(
+  name: "braquo",
+  age: "20",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/braquo.jpg"
+  )
+
+borgen = Recommandation.create!(
+  name: "Borgen",
+  age: "20",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/borgen.jpeg"
+  )
+
+plusbellelavie = Recommandation.create!(
+  name: "Plus Belle La Vie",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/plusbellelavie.jpg"
+  )
+
+plancoeur = Recommandation.create!(
+  name: "Plan Coeur",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/plancoeur.jpg"
+  )
+
+dixpourcent = Recommandation.create!(
+  name: "10%",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/dixpourcent.jpg"
+  )
+
+sexeducation = Recommandation.create!(
+  name: "Sex Education",
+  age: "20",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/sexeeducation.jpg"
+  )
+
+advitam = Recommandation.create!(
+  name: "Ad Vitam",
+  age: ["20", "60"],
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/advitam.png"
+  )
+
+dark = Recommandation.create!(
+  name: "Dark",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/dark.jpeg"
+  )
+
+blackmirror = Recommandation.create!(
+  name: "Black Mirror",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/blackmirror.jpg"
+  )
+
+misfits = Recommandation.create!(
+  name: "Misfits",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/misfits.jpg"
+  )
+
+bodyguard = Recommandation.create!(
+  name: "Bodyguard",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/bodyguard.jpg"
+  )
+
+mindhunter = Recommandation.create!(
+  name: "Mindhunter",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/mindhunter.jpg"
+  )
+
+suits = Recommandation.create!(
+  name: "Suits",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/suits.jpg"
+  )
+
+ rickandmorty = Recommandation.create!(
+  name: "Rick & Morty",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/rickandmorty.jpg"
+  )
+
+ bojack = Recommandation.create!(
+  name: "Bojack Horseman",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/bojack.jpg"
+  )
+
+ brookling99 = Recommandation.create!(
+  name: "Brookling 99",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "casadepapel.jpeg"
+  )
+
+riverdale = Recommandation.create!(
+  name: "Riverdale",
+  age: "20",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/riverdale.png"
+  )
+
+sense8 = Recommandation.create!(
+  name: "Sense 8",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/sense8.jpg"
+  )
+
+the100 = Recommandation.create!(
+  name: "The 100",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/the100.jpg"
+  )
+
+theOA = Recommandation.create!(
+  name: "The OA",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/theOA.jpg"
+  )
+
+sabrina = Recommandation.create!(
+  name: "Sabrina",
+  age: "20",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/sabrina.png"
+  )
+
+patpatrouille = Recommandation.create!(
+  name: "PatPatrouille",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/patpatrouille.jpeg"
+  )
+
+robocar = Recommandation.create!(
+  name: "Robocar",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/robocar.jpeg"
+  )
+
+dora = Recommandation.create!(
+  name: "Dora l'Exploratrice",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/dora.jpg"
+  )
+
+leclubdes5 = Recommandation.create!(
+  name: "Le club des 5",
+  age: "10",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/leclubdes5.jpg"
+  )
+
+peppapig = Recommandation.create!(
+  name: "Peppa Pig",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/peppapig.png"
+  )
+
+zinzins = Recommandation.create!(
+  name: "les Zinzins de l'espace",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/zinzin.jpg"
+  )
+
+trotro = Recommandation.create!(
+  name: "Trotro",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/trotro.jpg"
+  )
+
+lapinscretins = Recommandation.create!(
+  name: "Les lapins crétins",
+  age: "10",
+  genre: "Comédie",
+  origine: "UE",
+  image: "recommandations/lapincretins.jpg"
+  )
+
+wakfu = Recommandation.create!(
+  name: "wakfu",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/wakfu.jpg"
+  )
+
+martinmatin = Recommandation.create!(
+  name: "Martin Matin",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/martinmatin.jpg"
+  )
+
+dragons = Recommandation.create!(
+  name: "Dragons",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/dragons.png"
+  )
+
+tintin = Recommandation.create!(
+  name: "Tintin",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/tintin.jpg"
+  )
+
+tortueninja = Recommandation.create!(
+  name: "Tortues Ninjas",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/tortuesninjas.jpg"
+  )
+
+batman = Recommandation.create!(
+  name: "Batman",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/batman.jpg"
+  )
+
+pyjamasks = Recommandation.create!(
+  name: "Pyjamasks",
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/pyjamask.png"
+  )
+
+piccou = Recommandation.create!(
+  name: "Picsou",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/picsou.jpeg"
+  )
+
+spiderman = Recommandation.create!(
+  name: "Spiderman",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/spiderman.1jpeg"
+  )
+
+octonautes = Recommandation.create!(
+  name: "Les Octonautes",
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/octonautes.jpg"
+  )
+
+ben10 = Recommandation.create!(
+  name: "Ben 10",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/ben10.jpeg"
+  )
+
+ironman = Recommandation.create!(
+  name: "ironman",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/ironman.jpg"
+  )
+
+lego = Recommandation.create!(
+  name: "Lego",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/lego.jpg"
+  )
+
+superman = Recommandation.create!(
+  name: "Superman",
+  age: "10",
+  genre: "Sci-fi",
+  origine: "US",
+  image: "recommandations/superman.jpg"
+  )
+
+luther = Recommandation.create!(
+  name: "Luther",
+  age: "20",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/luther.jpg"
+  )
