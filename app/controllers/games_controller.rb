@@ -1,8 +1,11 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.all.order(:difficulty)
-    @front_games = Game.where(game_type: "Frontend")
-    @back_games = Game.where(game_type: "Backend")
+    games = Game.all.order(:difficulty)
+    @games_sorted = []
+    games_finished = games.select { |game| cookies[game.id] == game.name }
+    games_todo = games.select { |game| cookies[game.id].nil? }
+    games_todo.each { |game| @games_sorted << game }
+    games_finished.each { |game| @games_sorted << game }
   end
 
   def result
@@ -39,4 +42,3 @@ class GamesController < ApplicationController
     end
   end
 end
-
