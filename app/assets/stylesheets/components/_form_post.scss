@@ -10,16 +10,9 @@
   text-align: center;
 }
 
-@media screen and (min-width:720px) {
-  .form-post  {
-    margin-top:150px;
-  }
-}
-
-
-
 .form-container {
   max-width: 700px;
+  z-index:2;
 }
 
 .btn {

@@ -13,43 +13,6 @@
 @import "components/index";
 @import "pages/index";
 
-
-.fh-100 {
-  display:flex;
-  justify-content:center;
-  flex-direction: column;
-  height: calc(100vh - 56px);
-background-color: #f8da7b;
-}
-
-.top-bg {
-  background-image: asset-url("top-banner.svg");
-    position: absolute;
-    width: 100%;
-    background-position: top;
-    background-repeat: no-repeat;
-    top: 56px;
-    height: auto;
-}
-
-.bg-light {
-  background-color: $light-gray;
-}
-
-.bg-yellow {
-  background-color: $yellow;
-}
-
-.bg-blue {
-  background-color: $blue;
-}
-.bg-yellow-light {
-  background-color: $yellow-light;
-}
-.margin-title {
-  margin-top: 100px;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -57,9 +20,26 @@ body {
   margin: 0;
 }
 
+.fh-100 {
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  background-color: #f8da7b;
+}
+
+.top-bg {
+  background-image: asset-url("top-banner.svg");
+  position: absolute;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  top: 56px;
+  height: auto;
+}
+
 .bg-left {
   background-image: asset-url("city-bg.svg");
-  // background-image: url(/assets/city-bg-3cbaf36….svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -72,4 +52,34 @@ body {
 
 .display-right {
   width: 80%;
+}
+
+.bg-city {
+  background-image: asset-url("city-bg.svg");
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.bg-light {
+  background-color: $light-gray;
+}
+
+.bg-yellow {
+  background-color: $yellow;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-yellow-light {
+  background-color: $yellow-light;
+}
+
+.margin-title {
+  margin-top: 100px;
 }
