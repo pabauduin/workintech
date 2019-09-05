@@ -1,7 +1,6 @@
 const button = document.querySelectorAll('.form-check');
 
 if (button.length > 0) {
-  console.log("test")
   const label1 = button[0].getElementsByTagName('label');
   const label2 = button[1].getElementsByTagName('label');
   const submit = document.getElementById('submit-question');
