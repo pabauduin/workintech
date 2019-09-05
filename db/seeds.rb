@@ -320,7 +320,7 @@ himym = Recommandation.create!(
   )
 
 teentitans = Recommandation.create!(
-  name: "Teen Titans GO"
+  name: "Teen Titans GO",
   age: "10",
   genre: "Police",
   origine: "US",
@@ -328,7 +328,7 @@ teentitans = Recommandation.create!(
   )
 
 tometjerry = Recommandation.create!(
-  name: "Tom & Jerry"
+  name: "Tom & Jerry",
   age: "10",
   genre: "Comédie",
   origine: "US",

@@ -45,7 +45,7 @@ if (variable3) {variable3.value = "30"}
 
 
 // MOUVEMENT CSS & AFFICHAGE RESULTAT
-if (variable1N.nil) {
+if (variable1N == null) {
 if (name.innerHTML != " Trump {") {
   document.getElementById("variable1").addEventListener('change', (event) =>
     {
