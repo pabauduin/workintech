@@ -103,7 +103,7 @@ if (variable3)
       });
   }
 // Affichage du victory
-if (variable1N.nil) {
+if (variable1N == null) {
   if (name.innerHTML === " Trump {")
     {
       document.getElementById("variable1").addEventListener(`change`, (event) =>
