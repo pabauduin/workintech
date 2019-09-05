@@ -50,9 +50,11 @@
 </div>
 </div>
 
-
-
   </div>
+<% if cookies[:sound].nil? %>
+  <%= audio_tag "netflix.mp3", class: "audio-play" %>
+  <% cookies[:sound] = "ok" %>
+<% end %>
 
-<%= audio_tag "netflix.mp3", class: "audio-play" %>
+
 
