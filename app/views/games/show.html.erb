@@ -10,7 +10,7 @@
           <% if @game.name.include?("Dragon") %>
           <div class="card-dragon"><%= @game.description %></div>
           <% elsif @game.name.include?("Trump") %>
-          <div class="card-trump"><%= @game.description %></div>
+          <div class="game-desc"><%= @game.description %></div>
           <% elsif @game.name.include?("Netflix") %>
           <div class="card-netflix"><%= @game.description %></div>
           <% end %>
