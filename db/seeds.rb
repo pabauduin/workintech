@@ -308,7 +308,7 @@ wire = Recommandation.create!(
   age: "60",
   genre: "Police",
   origine: "US",
-  image: "recommandations/thewire.jpeg"
+  image: "recommandations/thewire.jpg"
   )
 
 himym = Recommandation.create!(
@@ -516,7 +516,7 @@ borgen = Recommandation.create!(
   age: "20",
   genre: "Police",
   origine: "UE",
-  image: "recommandations/borgen.jpeg"
+  image: "recommandations/borgen.jpg"
   )
 
 plusbellelavie = Recommandation.create!(
@@ -564,7 +564,7 @@ dark = Recommandation.create!(
   age: "20",
   genre: "Sci-fi",
   origine: "UE",
-  image: "recommandations/dark.jpeg"
+  image: "recommandations/dark.jpg"
   )
 
 dark2 = Recommandation.create!(
@@ -572,7 +572,7 @@ dark2 = Recommandation.create!(
   age: "60",
   genre: "Sci-fi",
   origine: "UE",
-  image: "recommandations/dark.jpeg"
+  image: "recommandations/dark.jpg"
   )
 
 blackmirror = Recommandation.create!(
@@ -636,7 +636,7 @@ suits = Recommandation.create!(
   age: "20",
   genre: "Comédie",
   origine: "US",
-  image: "casadepapel.jpeg"
+  image: "casadepapel.jpg"
   )
 
 riverdale = Recommandation.create!(
@@ -684,7 +684,7 @@ patpatrouille = Recommandation.create!(
   age: "10",
   genre: "Police",
   origine: "UE",
-  image: "recommandations/patpatrouille.jpeg"
+  image: "recommandations/patpatrouille.jpg"
   )
 
 robocar = Recommandation.create!(
@@ -692,7 +692,7 @@ robocar = Recommandation.create!(
   age: "10",
   genre: "Police",
   origine: "UE",
-  image: "recommandations/robocar.jpeg"
+  image: "recommandations/robocar.jpg"
   )
 
 dora = Recommandation.create!(
@@ -804,7 +804,7 @@ piccou = Recommandation.create!(
   age: "10",
   genre: "Comédie",
   origine: "US",
-  image: "recommandations/picsou.jpeg"
+  image: "recommandations/picsou.jpg"
   )
 
 spiderman = Recommandation.create!(
@@ -812,7 +812,7 @@ spiderman = Recommandation.create!(
   age: "10",
   genre: "Comédie",
   origine: "US",
-  image: "recommandations/spiderman.1jpeg"
+  image: "recommandations/spiderman.1jpg"
   )
 
 octonautes = Recommandation.create!(
@@ -828,7 +828,7 @@ ben10 = Recommandation.create!(
   age: "10",
   genre: "Sci-fi",
   origine: "US",
-  image: "recommandations/ben10.jpeg"
+  image: "recommandations/ben10.jpg"
   )
 
 ironman = Recommandation.create!(
