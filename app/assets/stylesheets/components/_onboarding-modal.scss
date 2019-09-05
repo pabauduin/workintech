@@ -1,8 +1,7 @@
 .onboarding-modal {
   position: absolute;
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
   width: 100%;
-  min-height:100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: $white;
   display: flex;

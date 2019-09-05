@@ -25,7 +25,7 @@ body {
   display:flex;
   justify-content:center;
   flex-direction: column;
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
   background-color: #f8da7b;
 }
 
@@ -33,7 +33,7 @@ body {
   display:flex;
   justify-content:center;
   flex-direction: column;
-  height: calc(90vh - 56px);
+  min-height: calc(90vh - 56px);
   border-radius: 0 0 0px 20px;
   top: -46px;
   box-shadow: -8px 8px 0 $white;
@@ -54,6 +54,12 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 720px) {
+  .bg-left {
+    display: none !important;
+  }
 }
 
 .bg-right {
