@@ -4,7 +4,7 @@
 
   <!-- condition front -->
   <% if @total_points < 0 %>
-    <div class="col-12 col-md-6 d-flex justify-content-around">
+    <div class="col-12 col-md-6 d-flex justify-content-around bg-left bg-yellow fh-100">
   <!-- boy, or girl ? -->
   <% if @boy_or_girl[0].points == "-2"  %>
     <%= image_tag "boy-front.svg", alt: "alttext", class: "character" %>
@@ -13,7 +13,8 @@
    <% end %>
 
     </div>
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-6 fh-100 bg-right">
+      <div class="display-right">
       <h1>Le métier de Développeur Front-End t'a choisi !</h1>
       <p>Le développeur front-end est en charge des parties des applications ou des sites web qui sont visibles directement par les utilisateurs et avec lesquelles ces derniers peuvent interagir. </p>
       <div class="buttons">
@@ -22,6 +23,7 @@
       </div>
       <% cookies[:job] = "Front-end" %>
     </div>
+  </div>
 
   <!-- condition back -->
   <% else %>
