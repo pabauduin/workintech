@@ -45,6 +45,7 @@ if (variable3) {variable3.value = "30"}
 
 
 // MOUVEMENT CSS & AFFICHAGE RESULTAT
+if (variable1N.nil) {
 if (name.innerHTML != " Trump {") {
   document.getElementById("variable1").addEventListener('change', (event) =>
     {
@@ -60,6 +61,7 @@ if (name.innerHTML != " Trump {") {
           setTimeout(function() { btngame.style.display = "block";}, 500);
         }
     });
+};
 };
 // --------------------------------------------------------------------------------
 // TRUMP
@@ -101,6 +103,7 @@ if (variable3)
       });
   }
 // Affichage du victory
+if (variable1N.nil) {
   if (name.innerHTML === " Trump {")
     {
       document.getElementById("variable1").addEventListener(`change`, (event) =>
@@ -122,4 +125,5 @@ if (variable3)
             btngame.style.display = "block"}
         })
     }
+};
 };

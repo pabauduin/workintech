@@ -20,12 +20,23 @@ body {
   margin: 0;
 }
 
+
 .fh-100 {
   display:flex;
   justify-content:center;
   flex-direction: column;
   height: calc(100vh - 56px);
   background-color: #f8da7b;
+}
+
+.fh-90 {
+  display:flex;
+  justify-content:center;
+  flex-direction: column;
+  height: calc(90vh - 56px);
+  border-radius: 0 0 0px 20px;
+  top: -46px;
+  box-shadow: -8px 8px 0 $white;
 }
 
 .top-bg {
@@ -60,12 +71,20 @@ body {
   background-repeat: repeat-x;
 }
 
-.bg-light {
-  background-color: $light-gray;
+.bg-lightgray {
+  background-color: $lightgray;
 }
 
 .bg-yellow {
   background-color: $yellow;
+}
+
+.bg-yellow-game {
+  background-color: rgba(255, 188, 0, 0.4);
+}
+
+.bg-white {
+  background-color: $white;
 }
 
 .bg-red {
@@ -74,6 +93,15 @@ body {
 
 .bg-blue {
   background-color: $blue;
+}
+
+.bg-darkblue {
+  background-color: $darkblue;
+}
+
+.bg-lightblue {
+
+  background-color: $lightblue;
 }
 
 .bg-yellow-light {

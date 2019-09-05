@@ -1,9 +1,11 @@
 <div class="game">
-    <h2 style= "margin-left : 730px">Notre sélection pour <%= cookies[:firstname] %></h2>
-  <div class="container">
+  <div class="container-fluid">
   <div class="row">
-    <div class="col-12 col-md-6">
-       <div id="sublime", class="sublime-grid-container">
+  <div class="col-12 col-md-6 game-padding">
+    <h1><span class="logo"><%= image_tag "netflix.svg", alt: "alttext" %></span>Netflix</h1>
+
+    <p>Pour ce premier exercice Back-end, on te demande de changer certaines <span class='concept'>conditions</span> pour modifier l'algorithme. Le travail d'un développeur est de travailler sur ces <span class='concept'>conditions</span> pour personnaliser le site internet.</p>
+    <div id="sublime", class="sublime-grid-container">
           <%= form_for("", method: "get",:html => {:id => "netflixForm"},remote: true) do |f| %>
             <div class="sublime-item-1">1</div>
             <div class="sublime-item-2">Netflix {</div>
@@ -20,22 +22,37 @@
             <div class="sublime-item-13">7</div>
             <div class="sublime-item-14"></div>
             <% end %>
-       </div>
-            <%= link_to "Valider", "resultnetflix", id: "netflixbtn", class: "button-red", style: "display:none;" %>
-    </div>
-  <div class="col-12 col-md-6">
+  </div>
+  <%= link_to "Valider", "resultnetflix", id: "netflixbtn", class: "button-red mt-3", style: "display:none;" %>
+  </div>
+
+
+
+
+  <div class="col-12 col-md-6 fh-90 bg-lightgray align-items-center game-padding">
+    <div class="game-desc">TOUDOUUUM ! Le code de Netflix est cassé, et les recommandations ne sont plus du tout adaptées. Améliore le code pour améliorer les recommandations.</div>
+    <div class="mountain">
     <div id= "victory", style= "display: none ">
       <%= image_tag "win.svg"%>
     </div>
-      <div class= "netflixcard">
+      <div class= "netflix">
+        <h3>Nos recommandations pour <%= cookies[:firstname] %><br></h3>
         <% @recommandations.each do |recommandation| %>
-          <div class="card" style="width: 15rem;">
-            <%= recommandation.name %>
+          <div class="col-12 col-md-6">
+
             <%= image_tag recommandation.image %>
 
           </div>
-        <% end %>
+        <% end %></div>
       </div>
     </div>
-  </div>
+  </div>   </div>
 </div>
+</div>
+
+
+
+  </div>
+
+<%= audio_tag "netflix.mp3", class: "audio-play" %>
+
