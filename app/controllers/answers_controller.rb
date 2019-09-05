@@ -3,6 +3,7 @@ class AnswersController < ApplicationController
     @form     = Form.find(params[:form_id])
     @answer   = Answer.new
     @question_remain = Question.all - @form.questions
+    @progressbar = 100 - (@question_remain.size*8)
     @answers = Answer.all
     @boy_or_girl = @answers.select { |answer| answer.points == "2" || answer.points == "-2" }
 
