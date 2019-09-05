@@ -108,27 +108,6 @@
   margin-bottom: 20px;
 }
 
-.barre-recherche input{
-  padding:10px 30px;
-  margin-right:10px;
-
-
-
-
-
-}
-.netflixcard {
-  display: flex;
-  flex-wrap: wrap(4);
-  max-width: 500px;
-}
-
-.netflixcard img {
-  max-width: 160%;
-  object-fit: cover;
-}
-
-
 .card-dragon {
   font-family: "VT323", monospace;
   background: white;
@@ -200,23 +179,23 @@
       0   30px 0 -12px $black;
 }
 
-.card-trump {
-  font-weight:600;
+.game-desc {
+  font-weight: 600;
+  font-size: 16px;
   background: $white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  position: absolute;
   border-radius: 5px;
   z-index: 10;
-  width: 80%;
-  font-size:14px;
+  margin-bottom:10px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   border:2px $yellow solid;
-  font-family: "NotoSerif", serif;
   top:-10px;
 }
+
+
 
 .card-jobs img {
     vertical-align: middle;
@@ -227,9 +206,10 @@
 
 .mini-card{
   background-color: white;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius:  0 10px 10px;
+  border: 2px solid $yellow;
+  box-shadow: 7px 7px 0 rgb(255, 188, 0);
   padding: 10px;
-  border-radius: 0 0 10px 10px;
   min-height: 200px;
   margin-bottom: 20px;
   color: black;
@@ -243,25 +223,25 @@
 
 .mini-card h3 {
   font-size:20px;
-  background-color: $light-gray;
   border-radius:10px;
-  color: $darkblue;
+  color: black;
   padding:15px;
 }
 
 .card-job-show h2 {
-  color: $blue;
+  color: black;
 }
 
 .mini-card li {
   font-size:14px;
   list-style-type: none;
 }
+
 .mini-card ul {
   padding:10px;
 }
 
 
 .mini-card .far, .fas {
-  color: $darkblue;
+  color: $yellow;
 }
