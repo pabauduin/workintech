@@ -71,7 +71,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Tu es une personne organisée, et le désordre te stresse :",
+  description: "Tu es une personne organisée, et le désordre te stresse ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -79,7 +79,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Tu as des facilités à rester serein(e) et concentré(e) :",
+  description: "As-tu des facilités à rester serein(e) et concentré(e) ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -87,7 +87,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Tu préfères passer du temps sur ton ordinateur, plutôt que de prendre une feuille et dessiner :",
+  description: "Tu préfères passer du temps sur ton ordinateur, plutôt que de prendre une feuille et dessiner ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -95,7 +95,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Tu préfères planifier tes voyages à l’avance avec tes parents plutôt que partir en mode 'aventure' :",
+  description: "Tu préfères planifier tes voyages à l’avance avec tes parents plutôt que partir en mode 'aventure' ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -103,7 +103,7 @@ Question.create!(
   )
 
 Question.create!(
-  description: "Les problèmes en maths, tu détestes ça :",
+  description: "Les problèmes en maths, tu détestes ça ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: -1,
@@ -119,7 +119,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "La ponctualité, c’est important pour toi :",
+  description: "La ponctualité, c’est important pour toi ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -127,7 +127,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Ça t’arrive de lire les modes d’emploi :",
+  description: "Ça t’arrive de lire les modes d’emploi ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: 1,
@@ -135,7 +135,7 @@ Question.create!(
 )
 
 Question.create!(
-  description: "Être populaire c’est important pour toi (sois honnête) :",
+  description: "Être populaire c’est important pour toi (sois honnête) ?",
   answer_1: "Oui",
   answer_2: "Non",
   value_1: -1,
