@@ -319,6 +319,22 @@ himym = Recommandation.create!(
   image: "recommandations/himym.jpg"
   )
 
+teentitans = Recommandation.create!(
+  name: "Teen Titans GO"
+  age: "10",
+  genre: "Police",
+  origine: "US",
+  image: "recommandations/teentitan.png"
+  )
+
+tometjerry = Recommandation.create!(
+  name: "Tom & Jerry"
+  age: "10",
+  genre: "Comédie",
+  origine: "US",
+  image: "recommandations/tometjerry.jpg"
+  )
+
 friends = Recommandation.create!(
   name: "Friends",
   age: "60",
@@ -391,6 +407,14 @@ bureaudeslegendes = Recommandation.create!(
   image: "recommandations/bureaudeslegendes.png"
   )
 
+bureaudeslegendes = Recommandation.create!(
+  name: "Bureau des Légendes",
+  age: "20",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/bureaudeslegendes.png"
+  )
+
 engrenages = Recommandation.create!(
   name: "Engrenage",
   age: "60",
@@ -402,6 +426,14 @@ engrenages = Recommandation.create!(
 sherlock = Recommandation.create!(
   name: "Sherlock",
   age: "60",
+  genre: "Police",
+  origine: "UE",
+  image: "recommandations/sherlock.jpg"
+  )
+
+sherlock = Recommandation.create!(
+  name: "Sherlock",
+  age: "20",
   genre: "Police",
   origine: "UE",
   image: "recommandations/sherlock.jpg"
@@ -458,6 +490,14 @@ lesrevenants = Recommandation.create!(
 realhumans = Recommandation.create!(
   name: "Real Humans",
   age: "60",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/realhumans.jpg"
+  )
+
+realhumans2 = Recommandation.create!(
+  name: "Real Humans",
+  age: "20",
   genre: "Sci-fi",
   origine: "UE",
   image: "recommandations/realhumans.jpg"
@@ -522,6 +562,14 @@ advitam = Recommandation.create!(
 dark = Recommandation.create!(
   name: "Dark",
   age: "20",
+  genre: "Sci-fi",
+  origine: "UE",
+  image: "recommandations/dark.jpeg"
+  )
+
+dark2 = Recommandation.create!(
+  name: "Dark",
+  age: "60",
   genre: "Sci-fi",
   origine: "UE",
   image: "recommandations/dark.jpeg"
