@@ -28,19 +28,7 @@ class GamesController < ApplicationController
   end
 
   def update
-    # if params[:variable1N].present?
-    #   if params[:variable3N].present? && (params[:variable3N] != "Sci-fi")
-    #     flash[:notice] = "le code est erroné"
-    #   elsif params[:variable2N].present? && (params[:variable2N] != "UE")
-    #     flash[:notice] = "le code est erroné"
-    #     render :show
-    #   elsif params[:variable1N] != "10"
-    #     flash[:notice] = "le code est erroné"
-    #     render :show
-    #   else redirect_to result_path
-    #   end
-    # else
-      @game = Game.find(params[:id])
+       @game = Game.find(params[:id])
       if params[:variable3].present? && (params[:variable3] != @game.solution_variable3)
         flash[:notice] = "le code est erroné"
         render :show
