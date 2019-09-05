@@ -37,7 +37,7 @@
 .h1-heart {
   color: white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-left: 100px;
+
 }
 
 .h1-heart img {
@@ -65,9 +65,7 @@
   margin-top: 76px;
 }
 
-.job-container {
-  padding: 0 2%;
-}
+
 
 .school {
   color:black;
@@ -98,5 +96,11 @@
   width: 100%;
   object-fit: cover;
   mix-blend-mode: overlay;
+}
+
+@media screen and (max-width: 1400px) {
+.banner-job img {
+  mix-blend-mode: initial;
+}
 }
 

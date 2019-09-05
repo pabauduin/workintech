@@ -22,6 +22,7 @@
   <%= f.input :points, as: :radio_buttons, label: "", collection: [["#{@question.value_1}", img1], ["#{@question.value_2}", img2]], label_method: :second, value_method: :first %>
   <%= f.input :question_id, label: false, input_html: { value:"#{@question.id}", class: "d-none"} %>
    <%= f.submit "Valider", class: "button-red", id: "submit-question" %>
+
    <% if @boy_or_girl.count > 0 %>
     <% cookies[:boy_or_girl] = @boy_or_girl.last.points %>
    <% end %>
@@ -29,7 +30,7 @@
   <% elsif @question.description.include?("prénom") %>
     <%= f.input :points, label: false %>
     <%= f.input :question_id, label: false, id: "firstname", input_html: { value:"#{@question.id}", class: "d-none"} %>
-    <%= f.submit :submit, class: "button-red", value: "Valider" %>
+    <%= f.submit :valider, class: "button-red", value: "Valider" %>
 
 
   <% else %>
@@ -43,7 +44,6 @@
  <%= f.submit "Valider", class: "button-red", id: "submit-question" %>
   <% end %>
 <% end %>
-
   </div>
 
 </div>

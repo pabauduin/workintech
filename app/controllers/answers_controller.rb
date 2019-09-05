@@ -14,12 +14,17 @@ class AnswersController < ApplicationController
       end
     end
 
+
+
     if @question_remain.empty?
       redirect_to form_path(params[:form_id])
     else
       # @first_question = @question_remain.select { |question| question.description == "Choisis ton avatar" }
       @question = @question_remain.sort_by { |question| -question.answer_1.length }.first
     end
+
+
+
   end
 
   def create
@@ -27,10 +32,13 @@ class AnswersController < ApplicationController
     @answer = Answer.new(answer_params)
     @answer.form        = @form
     @answer.question_id = params[:answer][:question_id].to_i
-    if @answer.save
-      redirect_to new_form_answer_path(@form)
+    if @answer.points.match?(/(\A\S{1,20}\z)/)
+      if @answer.save
+        redirect_to new_form_answer_path(@form)
+      end
     else
-      render :new
+      flash[:notice] = "Nom trop long (- de 20 caractères)"
+      redirect_to new_form_answer_path(@form)
     end
   end
 
